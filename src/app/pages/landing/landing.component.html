@@ -1,0 +1,77 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">
+  	<img src="assets/imgs/logo.png"></a>
+  <form class="form-inline nav-buttons">
+    <button class="btn" >Join Now</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" >Sign Up</button>
+  </form>
+</nav>
+
+
+
+<div class="containerAll">
+	<div class="home-section">
+		<div class="home-section-texts">
+			<h1>
+				Welcome to your professional community
+			</h1>
+    		<button class="btn btn-outline-success my-2 my-sm-0" >Join us now!</button>
+		</div>
+
+		<div class="home-section-image">
+			<img src="assets/imgs/meeting.png">
+		</div>
+	</div>
+
+	<div class="work-section">
+		<div class="work-content">
+		<div class="work-section-texts">
+			<h1>
+				Find the right job for or internship for you.
+			</h1>
+    	
+		</div>
+
+		<div class="work-section-jobs">
+			<h4>
+				SUGGESTED SEARCHES
+			</h4>
+			<div class="work-job-content">
+				<div class="jobs" *ngFor = "let job of jobs">
+					{{ job.name }}
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+	<div class="post-section">
+		<div class="post-section-texts">
+			<h1>
+				Post your job for a million people to see
+			</h1>
+    		
+		</div>
+
+		<div class="post-section-info">
+			
+    		<button class="btn btn-outline-secondary my-2 my-sm-0" >Post a job</button>
+		</div>
+	</div>	
+
+
+	<div class="join-section">
+		<div class="join-section-texts">
+			<h1>
+				Join now for the pursuit of your careers on Job App
+			</h1>
+    		<button class="btn btn-success my-2 my-sm-0" >Get Started</button>
+		</div>
+
+		<div class="join-section-info">
+			
+    		<img src="assets/imgs/meeting.png">
+		</div>
+	</div>		
+</div>
