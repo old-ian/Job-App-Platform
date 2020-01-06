@@ -1,0 +1,56 @@
+
+.profile-header-content {
+  	max-width: 100%;
+	background: #ffffff;
+	border: .5px solid rgba(187, 187, 187, 0.808);
+	img {
+		height: 13vw;
+	}
+	.texts {
+		color: #000000;
+		position: relative;
+		padding: 10px;
+		h2 {
+			font-size: 2rem; 
+			margin-bottom: 6px !important;
+			margin-top: 20px;
+		}
+		h3 {
+			margin: 4px;
+			font-size: 1.4rem;
+		}
+		.actions {
+			margin: 0 auto;
+			position: relative;
+			background-color: #e6e9ec;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			box-sizing: border-box;
+			margin-top: -30px;
+			.profile-photo {
+				position: absolute;
+				left: 0;
+				cursor: pointer;
+				height: 10vw !important;
+				width: 10vw;
+				background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+				background-size: cover;
+			}
+		}
+		.buttons {
+			height: 4vw;
+		}
+	}
+	
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.container { padding: 0px 30px !important;  }
+.profile-header { 
+		width: 100%;
+		margin-top: 50px;
+	}
