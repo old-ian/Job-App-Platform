@@ -11,18 +11,30 @@
 		position: relative;
 		padding: 10px;
 		h2 {
-			font-size: 2rem; 
+			font-size: 1.8rem; 
 			margin-bottom: 6px !important;
-			margin-top: 20px;
+			margin-top: 10px;
+		}
+		.contacts {
+			display: inline-flex;
+			h3, .contact-link {
+				margin: 4px;
+				font-size: 1.2rem;
+			}
+			.contact-link {
+				margin-left: 10px;
+				cursor: pointer;
+				color: rgb(230, 110, 12) !important;
+			}
 		}
 		h3 {
 			margin: 4px;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 		}
 		.actions {
 			margin: 0 auto;
 			position: relative;
-			background-color: #e6e9ec;
+			background-color: transparent;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -35,15 +47,103 @@
 				cursor: pointer;
 				height: 10vw !important;
 				width: 10vw;
+				border: 1px solid black;
+				-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+				box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
 				background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
 				background-size: cover;
-			}
-		}
+			}		}
 		.buttons {
 			height: 4vw;
+			width: 100%;
+			text-align: right;
+			.buttons-content {
+				margin-top: 13px;
+				.add-section {
+					cursor: pointer;
+					color: #ffffff;
+					background-color: rgb(230, 110, 12) !important;
+					.fas {
+						margin-bottom: .3vw;
+						font-size: 1.5rem !important;
+					}
+				}
+
+				.pdf-section {
+					cursor: pointer;
+					border: 1px solid black;
+					color: gray;
+				}
+				.edit-section {
+					cursor: pointer;
+					padding: 0px;
+					margin: 0px;
+					font-size: 2rem;
+					border-radius: 50%;
+				}
+			}
 		}
 	}
-	
+}
+
+.profile-education {
+	margin-top: 20px !important;
+	.profile-education-content {
+		max-width: 100%;
+		width: 100%;
+		background: #ffffff;
+		border: .5px solid rgba(187, 187, 187, 0.808);
+		color: black;
+		.texts {
+			.experience-content {
+				width: 100%;
+				margin-top: 30px;
+				.content {
+					display: inline-flex;
+					width: 100%;
+					.employment {
+						width: 30%;
+					}
+					.info {
+						width: 70%;
+						h3:first-child {
+							font-weight: bold;
+						}
+						.company {
+							.company-info {
+								display: inline-flex !important;
+								h4 {
+									margin: 0px;
+									font-size: 1.3rem;
+								}
+								h4:last-child {
+									margin: 0px 5px;
+								}
+							}
+						}
+
+						.company-employment-info {
+							margin-top: 15px;
+							color: gray;
+							.employment-info {
+								display: inline-flex;
+								width: 100%;
+								.title {
+									width: 20%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.profile-education:last-child {
+	margin-bottom: 30px;
 }
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
