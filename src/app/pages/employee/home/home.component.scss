@@ -1,0 +1,291 @@
+ ::ng-deep .menu {
+	margin-top: 5px;
+	background: #ffffff!important;
+    width: 250px;
+	button {
+		color: #000000;
+		font-family: helvetica;
+		font-size: 1rem;
+		font-weight: bold;
+		display: inline-flex;
+		width: 100%;
+		border-bottom: 1px solid rgba(187, 187, 187, 0.808);
+		.item {
+			width: 90%;
+		}
+		i {
+			width: 10%;
+			float: right;
+			margin: auto;
+			text-align: right;
+			font-size: 1.1rem;
+		}
+	}
+	button:last-child { border: none; }
+ }
+
+.body { 
+	background: #ECE9E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: Helvetica;
+ }
+ .profile-content-footer, .profile-jobs-content-footer {
+    border-top: 1px solid rgba(128, 128, 128, 0.45);
+    padding: 10px 26px;
+    h3 {
+    	color: #000000;
+    	font-size: .9rem;
+    	cursor: pointer;
+    	i {
+			color: rgb(230, 110, 12) !important;    		
+    	}
+    }
+ }.profile-jobs-content-footer {
+ 	h3 {
+ 		text-align: center;
+ 	}
+ }
+.profile-header-content {
+  	max-width: 100%;
+	background: #ffffff;
+	border: .5px solid rgba(187, 187, 187, 0.808);
+	margin-bottom: 10px;
+	img {
+		height: 5vw;
+	}
+	.title {
+		color: rgb(230, 110, 12) !important;
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	.all-jobs {
+		color: #000000;
+		.jobs {
+			margin: 10px 0px;
+			cursor: pointer;
+			padding-left: 10px;
+			.company {
+				font-size: 1rem;
+				margin-bottom: 1px;
+			}
+			.position {
+				font-size: .9rem;
+				color: gray;
+			}
+		}
+	}
+	.texts {
+		color: #000000;
+		position: relative;
+		padding: 10px;
+		h2 {
+			font-size: 1.1rem; 
+			margin-bottom: 6px !important;
+			margin-top: 4vw;
+			font-weight: bold;
+			text-align: center;
+		}
+		.contacts {
+			display: block;
+			margin-top: 10px;
+			h3 {
+				text-align: left;
+				color: gray;
+			}
+			h3, .contact-link {
+				margin: 4px;
+				font-size: .9rem;
+			}
+			.contact-link {
+				text-align: center;
+				margin-top: 10px;
+				color: rgb(230, 110, 12) !important;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+		h3 {
+			margin: 4px;
+			font-size: 1.2rem;
+		}
+		.actions {
+			margin: 0 auto;
+			position: relative;
+			background-color: transparent;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			box-sizing: border-box;
+			margin-top: -30px;
+			.profile-photo {
+				position: absolute;
+				cursor: pointer;
+				height: 6vw !important;
+				width: 6vw;
+				border: 1px solid black;
+				-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+				box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+				background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+				background-size: cover;
+			}		}
+		.buttons {
+			height: 4vw;
+			width: 100%;
+			text-align: right;
+			.buttons-content {
+				margin-top: 13px;
+				
+				.add-section {
+					cursor: pointer;
+					color: #ffffff;
+					background-color: rgb(230, 110, 12) !important;
+					.fas {
+						margin-bottom: .3vw;
+						font-size: 1.5rem !important;
+					}
+				}
+				/*::ng-deep .custom-class {
+
+			        background-color: red!important;
+			    }*/
+				.menu + * .cdk-overlay-pane > div.mat-menu-panel > div.mat-menu-content{
+			    }
+
+				.pdf-section {
+					cursor: pointer;
+					border: 1px solid black;
+					color: gray;
+				}
+				.edit-section {
+					cursor: pointer;
+					padding: 0px;
+					margin: 0px;
+					font-size: 2rem;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+.profile-education {
+	margin-top: 20px !important;
+	.profile-education-content {
+		max-width: 100%;
+		width: 100%;
+		background: #ffffff;
+		border: .5px solid rgba(187, 187, 187, 0.808);
+		color: black;
+		mat-card-title {
+			i {
+				color: rgb(230, 110, 12) !important;
+			}
+		}
+		.texts {
+			.experience-content {
+				width: 100%;
+				margin-top: 30px;
+				.content {
+					display: inline-flex;
+					width: 100%;
+					.employment {
+						width: 30%;
+					}
+					.info {
+						width: 70%;
+						h3:first-child {
+							font-weight: bold;
+							color: rgb(230, 110, 12) !important;
+						}
+						.company {
+							.company-info {
+								display: inline-flex !important;
+								h4 {
+									margin: 0px;
+									font-size: 1.3rem;
+
+								}
+								h4:last-child {
+									margin: 0px 5px;
+								}
+							}
+						}
+
+						.company-employment-info {
+							margin-top: 15px;
+							color: gray;
+							.employment-info {
+								display: inline-flex;
+								width: 100%;
+								.title {
+									width: 20%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.home-content {
+	display: inline-flex;
+	.profile-header {
+		width: 25%;
+	}
+	.jobs-content {
+		width: 75%;
+	}	
+}
+
+.profile-education:last-child {
+	margin-bottom: 30px;
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.container { 
+	padding: 0px 30px !important;
+
+	}
+.profile-header { 
+		width: 100%;
+		margin-top: 50px;
+	}
+
+
+.footer{
+  background: rgb(3,168,91);
+  color:white;
+  
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+		color: rgb(230, 110, 12) !important;
+        }
+    }
+  }  
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{
+		color: rgb(230, 110, 12) !important;}
+    }
+  } 
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+				

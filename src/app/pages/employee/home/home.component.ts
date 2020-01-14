@@ -6,8 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+user = 'John Ezekiel';
+appliedJobs = [ 
+  		{ 
+  		company: 'Outlast Developers',
+  		position: 'Software Engineer',
+  		location: 'Brazil' },
+  		{ 
+  		company: 'Outlast Developers',
+  		position: 'Senior Software Engineer',
+  		location: 'Brazil'}
+  	]	  	  	
+  constructor() { 
+  }
 
   ngOnInit() {
   }
