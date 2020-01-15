@@ -36,7 +36,35 @@
 		</mat-card-footer>
 	</mat-card>
 	</div>
-	<div class="jobs-content">
+	<div class="jobs-content" >
+		<div fxLayout="row wrap" class="lists"  *ngFor="let job of jobLists">
+			<mat-card class="job-lists">
+				 <div class="header">
+				    <div class="title"><img src="assets/imgs/logo.png"></div>
+				    <div class="header-actions">
+				      <button mat-icon-button  [matMenuTriggerFor]="menu"><i class="material-icons">more_horiz</i></button>
+				      <mat-menu  color="primary" #menu="matMenu" class="menu" xPosition="before">
+					  <button mat-menu-item><i class="far fa-bookmark"></i> <span class="item">Save Job</span></button>
+					</mat-menu>
+				    </div>
+				  </div>
+				<mat-card-content class="all-jobs">
+					<div class="jobs">
+						<h2 class="position"> {{ job.position }}</h2>
+						<h3 class="company"> {{ job.company }} </h3>
+						<h4 class="location"> {{ job.location }} </h4>
+						<h4 class="offer"><i class="material-icons">attach_money</i> {{ job.offer }} </h4>
+						<hr>
+						<h4 class="time">{{ job.time }}</h4>
+					</div>
+				</mat-card-content>
+			</mat-card>
+		</div>
+		<div class="see-more">
+			<hr>
+			<h2>See More</h2>
+			<hr>
+		</div>
 	</div>
 	</div>
 	
