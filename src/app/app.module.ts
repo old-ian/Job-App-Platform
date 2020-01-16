@@ -33,6 +33,7 @@ import { CompanySignupComponent } from './pages/company/company-signup/company-s
 
 // SERVICES
 import { ApiService } from './services/api/api.service';
+import { JobService } from './services/job/job.service';
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -131,7 +132,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, JobService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
