@@ -53,51 +53,86 @@
 	background: #ffffff;
 	border: .5px solid rgba(187, 187, 187, 0.808);
 	margin: 0px 10px 20px 10px;
-	padding: 10px;
+	padding: 0px !important;
 	.header {
 	  display: flex;
-	  height: 64px;
 	  box-sizing: border-box;
 	  align-items: top;
 	  color: rgba(0,0,0,0.6);
 	  width: 100%;
+	  padding: 0px 16px 0px 0px;
+	  border-bottom: 1px solid rgba(128, 128, 128, 0.4) !important;
 	  .title {
 	  	margin-right: auto;
+	  }
+	  .header-actions {
+	  	right: 0;
+    	margin: auto 0;
+	  }
+	}
+	.card-title {
+	  padding: 16px;
+	  h2 {
+	  	color: #000000;
+	  	font-size: 1.2rem;
+	  	font-weight: 300;
+	  }
+	  h3 {
+	  	color: rgba(128, 128, 128, 0.7);
+	  	font-size: 1rem;
+	  	font-weight: 300;
+	  }
+	}
+	.all-jobs {
+	  padding: 16px;
+	  display: inline-flex;
+	  width: 100%;
+	  .company-logo {
+	  	width: 12%;
 	  	img {
 	  		min-height: 4vw;
 	  		max-height: 4vw;
 	  	}
 	  }
-	  .header-actions {
-	  	right: 0;
-	  }
-	}
-	.all-jobs {
 		.jobs {
 			color: #000000;
+			width: 83%;
+			.top-section {
+				display: inline-flex;
+				i {
+					color: rgba(128, 128, 128, 0.4);
+					font-size: .8rem;
+					margin: auto 0;
+				}
+			}
 			h2, h3, h4 {
 				margin-bottom: 2px;
 			}
 			.position {
-				font-size: 1rem;
+				font-size: 1.2rem;
 			}
 			.company {
 				font-size: .9rem;
 				font-weight: 300;
+				margin-right: 2px;
 			}
-			.location, .offer, .time {
+			.location, .time {
 				font-size: .8rem;
 				font-weight: 300;
 				color: gray;
 			}
-			.offer {
-				font-size: .9rem !important;
-				margin-top: 10px;
+			.money {
+				display: inline-flex;
 				i {
-					font-size: 1.1rem;
-					margin: auto !important;
-					position: relative;
-					top: 4px;
+					font-size: 1rem;
+					margin: auto 0 !important;
+					color: #e66e0c !important;
+					margin-right: -6px !important;
+				}
+				.offer {
+					font-size: .9rem !important;
+					color: #e66e0c !important;
+					margin-left: 5px;
 				}
 			}
 			hr {
@@ -303,9 +338,8 @@
 		width: 75%;
 		.lists {			
 			margin-left: 2%;
-		 	max-width: 30%;
-		 	min-width: 30%;
-			display: inline-flex;
+		 	max-width: 100%;
+			display: block;
 		}
 		.see-more {
 			width: 100%;

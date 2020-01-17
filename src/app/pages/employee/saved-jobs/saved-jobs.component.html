@@ -2,7 +2,87 @@
 <app-app-navbar></app-app-navbar>
 
 <div class="container">
-
+<div class="home-content">
+		<div class="profile-header">
+	<mat-card class="profile-header-content">
+		<img mat-card-image src="assets/imgs/cover.jpg" alt="Photo of a Shiba Inu">
+		<mat-card-content class="texts">
+			<div class="actions">
+				<div mat-card-avatar class="profile-photo"></div>
+			</div>
+			<h2>Welcome {{ user }}</h2>
+			<div class="contacts">
+				<h3>Software Engineer</h3>
+				<h3>North California, United States of America</h3>
+				<h3 class="contact-link">Update my Profile</h3>
+			</div>
+		</mat-card-content>
+		<mat-card-footer class="profile-content-footer">
+			<h3 routerLink="/saved-jobs"><i class="fas fa-search"></i> Search Jobs</h3>
+		</mat-card-footer>
+	</mat-card>
+	<!-- Applied Jobs -->
+	<mat-card class="profile-header-content">
+		<h2 class="title">Applied Jobs</h2>
+		<mat-card-content class="all-jobs" *ngFor="let applied of appliedJobs">
+			<div class="jobs">
+				<h2 class="company"> {{ applied.company }}</h2>
+				<h3 class="position">{{ applied.position }}</h3>
+			</div>
+		</mat-card-content>
+		<mat-card-footer class="profile-jobs-content-footer">
+			<h3>Show All</h3>
+		</mat-card-footer>
+	</mat-card>
+	</div>
+	<div class="jobs-content" >
+		<div class="lists">
+			<mat-card class=" job-lists">
+				<mat-card-content class="card-title">
+					<h2>Saved items</h2>
+					<h3>Any Jobs you Saved is private</h3>
+				</mat-card-content>
+			</mat-card>
+		</div>
+		<div fxLayout="row wrap" class="lists"  *ngFor="let job of jobLists">
+			<mat-card class="job-lists">
+				 <div class="header">
+				    <div class="title"></div>
+				    <div class="header-actions">
+				      <button mat-icon-button  [matMenuTriggerFor]="menu"><i class="material-icons">more_horiz</i></button>
+				      <mat-menu  color="primary" #menu="matMenu" class="menu" xPosition="before">
+					  <button mat-menu-item><i class="far fa-bookmark"></i> <span class="item">Unsave Job</span></button>
+					</mat-menu>
+				    </div>
+				  </div>
+				<mat-card-content class="all-jobs">
+					<div class="company-logo"><img src="assets/imgs/logo.png"></div>
+					<div class="jobs">
+						<h2 class="position"> {{ job.position }}</h2>
+						<div class="top-section">
+							<h3 class="company"> {{ job.company }} </h3>
+							<i class="material-icons">stop</i>
+							<div class="money">
+								<i class="material-icons">attach_money</i>
+								<h4 class="offer"> {{ job.offer }} </h4>
+							</div>
+						</div>
+						
+						<h4 class="location"> {{ job.location }} </h4>
+						
+						<!-- <hr>
+						<h4 class="time">{{ job.time }}</h4> -->
+					</div>
+				</mat-card-content>
+			</mat-card>
+		</div>
+		<div class="see-more">
+			<hr>
+			<h2>See More</h2>
+			<hr>
+		</div>
+	</div>
+	</div>
 </div>
 <div class="mt-2 pt-4 footer">
 <div class="container">
