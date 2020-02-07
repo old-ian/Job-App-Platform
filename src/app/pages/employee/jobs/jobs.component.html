@@ -4,18 +4,21 @@
 <div class="container">
 	<!--PROFILE HEADER-->
 
-	<div class="home-content">
-		
-		
-	<div class="jobs-content" >
-		<h6>Your dream job's just a search away...</h6>
-		
-	</div>
+	<div class="home-content" style="margin-top: 30px;
+">
+	
+	<div class="search-content" >
+		<h4>Your dream job's just a search away...</h4>
+		<div class='search-bar'>
+			<input class='search-input' placeholder="Search Jobs">
+			<input class='search-input' placeholder="Search Locations">
+			<button class='search-button'>Search</button>
+		</div>
 	</div>
 
+</div>
 	<div class="home-content">
-
-		
+	
 	<div class="jobs-content" >
 		<h6>Based on your profile:</h6>
 		<div fxLayout="row wrap" class="lists"  *ngFor="let job of jobLists">
