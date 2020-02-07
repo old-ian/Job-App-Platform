@@ -4,38 +4,7 @@
 <div class="container">
 	<!--PROFILE HEADER-->
 	<div class="home-content">
-		<div class="profile-header">
-	<mat-card class="profile-header-content">
-		<img mat-card-image src="assets/imgs/cover.jpg" alt="Photo of a Shiba Inu">
-		<mat-card-content class="texts">
-			<div class="actions">
-				<div mat-card-avatar class="profile-photo"></div>
-			</div>
-			<h2>Welcome {{ user }}</h2>
-			<div class="contacts">
-				<h3>Software Engineer</h3>
-				<h3>North California, United States of America</h3>
-				<h3 class="contact-link">Update my Profile</h3>
-			</div>
-		</mat-card-content>
-		<mat-card-footer class="profile-content-footer">
-			<h3 routerLink="/saved-jobs"><i class="far fa-bookmark"></i> Saved Jobs</h3>
-		</mat-card-footer>
-	</mat-card>
-	<!-- Applied Jobs -->
-	<mat-card class="profile-header-content">
-		<h2 class="title">Applied Jobs</h2>
-		<mat-card-content class="all-jobs" *ngFor="let applied of appliedJobs">
-			<div class="jobs">
-				<h2 class="company"> {{ applied.company }}</h2>
-				<h3 class="position">{{ applied.position }}</h3>
-			</div>
-		</mat-card-content>
-		<mat-card-footer class="profile-jobs-content-footer">
-			<h3>Show All</h3>
-		</mat-card-footer>
-	</mat-card>
-	</div>
+		
 	<div class="jobs-content" >
 		<div fxLayout="row wrap" class="lists"  *ngFor="let job of jobLists">
 			<mat-card class="job-lists">
