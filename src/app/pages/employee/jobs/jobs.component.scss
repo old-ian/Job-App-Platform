@@ -301,6 +301,20 @@
 	}
 	.jobs-content {
 		width: 100%;
+		cursor: pointer;
+ 		max-width: 100%;
+ 		min-width: 100%;
+ 		margin-left: 3%;
+		background: #ffffff;
+		border: .5px solid rgba(187, 187, 187, 0.808);
+		margin: 0px 10px 20px 10px;
+		padding: 10px;
+		box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+		border-radius: 0.4%;
+		h6 {
+			margin: 10px 0px 10px 10px;
+			font-weight:bold;
+		}
 		.lists {			
 			margin-left: 2%;
 		 	max-width: 30%;
