@@ -21,6 +21,7 @@ import { NotificationsComponent } from './pages/employee/notifications/notificat
 import { SignupComponent } from './pages/employee/signup/signup.component';
 import { SignupSetProfileComponent } from './pages/employee/signup-set-profile/signup-set-profile.component';
 import { CompanyProfileComponent } from './pages/employee/company-profile/company-profile.component';
+import { JobsComponent } from './pages/employee/jobs/jobs.component';
 
 // COMPANY
 import { JobRequestComponent } from './pages/company/job-request/job-request.component';
@@ -92,7 +93,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     CompanyNotificationsComponent,
     CompanyLoginComponent,
     CompanySignupComponent,
-    AppNavbarComponent
+    AppNavbarComponent,
+    JobsComponent
   ],
   imports: [
     BrowserModule,
