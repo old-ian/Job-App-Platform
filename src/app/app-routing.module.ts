@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'aplications', component: ApplicationsComponent },
+  { path: 'applications', component: ApplicationsComponent },
   { path: 'company-profile', component: CompanyProfileComponent },
   { path: 'job/:id', component: JobComponent },
   { path: 'preference', component: JobPreferenceComponent },
