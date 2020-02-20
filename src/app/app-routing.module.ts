@@ -15,6 +15,7 @@ import { ProfileComponent } from './pages/employee/profile/profile.component';
 import { SavedJobsComponent } from './pages/employee/saved-jobs/saved-jobs.component';
 import { SearchComponent } from './pages/employee/search/search.component';
 import { SignupSetProfileComponent } from './pages/employee/signup-set-profile/signup-set-profile.component';
+import { JobsComponent } from './pages/employee/jobs/jobs.component';
 
 // EMPLOYER/COMPANY
 import { CompanyLoginComponent } from './pages/company/company-login/company-login.component';
@@ -45,6 +46,8 @@ const routes: Routes = [
   { path: 'saved-jobs', component: SavedJobsComponent },
   { path: 'employee/search', component: SearchComponent },
   { path: 'signup/set-up', component: SignupSetProfileComponent },
+  { path: 'jobs', component: JobsComponent },
+  
   // COMPANY
   { path: 'employer/company-login', component: CompanyLoginComponent },
   { path: 'employer/company-signup', component: CompanySignupComponent },
