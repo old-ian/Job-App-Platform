@@ -68,7 +68,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
-import { MatPaginatorModule } from '@angular/material/paginator'; 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { JobApplicationsComponent } from './pages/employee/job-applications/job-applications.component';
+import { SearchJobsComponent } from './pages/employee/search-jobs/search-jobs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -95,7 +97,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CompanyLoginComponent,
     CompanySignupComponent,
     AppNavbarComponent,
-    JobsComponent
+    JobsComponent,
+    JobApplicationsComponent,
+    SearchJobsComponent
   ],
   imports: [
     BrowserModule,
