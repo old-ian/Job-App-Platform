@@ -75,6 +75,9 @@
                     padding: 12px !important;
                     background: rgb(3,168,91);
                 }
+                .form-button:disabled {
+                    background: rgba(3, 168, 91, 0.356);
+                }
             }
         }
         .footer-app-content-actions {
@@ -84,6 +87,7 @@
                 font-size: 1.1rem;
                 color: rgb(3,168,91);
             }
+            
             p {
                 font-size: .9rem;
                 margin-top: 15px;

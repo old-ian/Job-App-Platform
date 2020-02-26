@@ -1,1 +1,92 @@
-<p>signup works!</p>
+<section class="app_content">
+    <div class="header_logo">
+        <img src="assets/imgs/logo.png">
+    </div>
+    <div class="header_content ">
+        <p class="header_content_subheading">Make the most of your professional life</p>
+    </div>
+    <div class="login_content">
+       
+        <div class="form_container">
+            <div class="input-container">
+                <!-- <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input matInput [formControl]="first_name">
+                    <button mat-icon-button matSuffix style="opacity: 0; cursor:default;">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput [formControl]="last_name">
+                    <button mat-icon-button matSuffix style="opacity: 0; cursor:default;">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field> -->
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput [formControl]="email">
+                    <button mat-icon-button matSuffix style="opacity: 0; cursor:default;">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <span class="join-form__form-body-agreement">By clicking Agree &amp; Join, you agree to the LinkedIn <a target="_blank"
+                        class="join-form__form-body-agreement-item-link">User
+                        Agreement</a>, 
+                        <a target="_blank" class="join-form__form-body-agreement-item-link">Privacy Policy</a>, 
+                        and <a
+                        target="_blank" class="join-form__form-body-agreement-item-link">Cookie Policy</a>. </span>
+                <button mat-button class="form-button" [disabled]="getErrorMessage() !== ''">Agree & Join</button>
+            </div>
+
+        </div>
+        <div class="or-line">
+            <hr>
+            <h2>or</h2>
+            <hr>
+        </div>
+        <div class="footer-app-content-actions">
+            <button mat-button class="form-button"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+            <!-- <div><a href="/checkpoint/rp/request-password-reset" class="forgot-button">Forgot
+                    password?</a></div>-->
+            <p>Already on Job App? <a href="/signup/cold-join" tabindex="0" class="join-now">Sign in</a></p> 
+        </div>
+    </div>
+</section>
+
+<footer class="footer__base" role="contentinfo">
+    <div class="footer__base__wrapper">
+        <p class="copyright">
+            <em><span class="a11y__label">JobApp</span>© 2020</em>
+        </p>
+        <div class="link_list">
+            <ul class="footer__base__nav-list" aria-label="Footer Legal Menu">
+                <li><a href="/legal/user-agreement?trk=d_checkpoint_lg_consumerLogin_ft_user_agreement">User
+                        Agreement</a></li>
+                <li><a href="/legal/privacy-policy?trk=d_checkpoint_lg_consumerLogin_ft_privacy_policy">Privacy
+                        Policy</a></li>
+                <li><a
+                        href="https://linkedin.com/help/linkedin/answer/34593?lang=en&amp;trk=d_checkpoint_lg_consumerLogin_ft_community_guidelines">Community
+                        Guidelines</a></li>
+                <li><a href="/legal/cookie-policy?trk=d_checkpoint_lg_consumerLogin_ft_cookie_policy">Cookie Policy</a>
+                </li>
+                <li><a href="/legal/copyright-policy?trk=d_checkpoint_lg_consumerLogin_ft_copyright_policy">Copyright
+                        Policy</a></li>
+                <li id="feedback-request"><a
+                        href="https://linkedin.com/help/linkedin?trk=d_checkpoint_lg_consumerLogin_ft_send_feedback&amp;lang=en"
+                        target="_blank" rel="nofollow noreferrer noopener">Send Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

@@ -28,7 +28,7 @@
                 </button>
             </mat-form-field>
 
-            <button mat-button class="form-button">Sign In</button>
+            <button mat-button class="form-button" [disabled]="getErrorMessage() !== ''">Sign In</button>
         </div>
        
         </div>
