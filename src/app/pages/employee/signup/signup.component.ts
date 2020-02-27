@@ -7,16 +7,21 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-
+  nextStep = false;
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
+  first_name = new FormControl('', [Validators.required]);
+  last_name = new FormControl('', [Validators.required]);
+  showErrorMessage: boolean;
   constructor() { }
 
   ngOnInit() {
+
   }
 
   getErrorMessage() {
+    const password: string = this.password.value;
     if (this.email.hasError('required')) {
       return 'You must enter an email';
     }
@@ -24,7 +29,28 @@ export class SignupComponent implements OnInit {
     if (this.password.hasError('required')) {
       return 'You must enter a password';
     }
-
+    if (password.length < 6) {
+      return 'Minimum password length is 6';
+    }
     return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  getContinueResponse() {
+    if (this.first_name.hasError('required')) {
+      return 'Please Enter your First Name';
+    }
+
+    if (this.last_name.hasError('required')) {
+      return 'Please Enter your Last Name';
+    }
+
+    return '';
+  }
+
+  signUp() {
+    if (this.getContinueResponse() !== '') {
+      this.showErrorMessage = true;
+    }
+
   }
 }

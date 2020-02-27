@@ -12,6 +12,7 @@
 
 ::ng-deep .mat-form-field-infix {
     border-top: .24375em solid transparent;
+    padding: .25em 0 0 0 !important; 
 }
 
 .app_content {
@@ -44,6 +45,7 @@
        -moz-box-shadow: 0 10px 6px -6px #777;
         box-shadow: 0 10px 6px -6px #777;
         padding-top: 30px;
+        border-radius: 5px;
         .form_container {
             .input-container {
                display: flex;
@@ -53,7 +55,7 @@
                 mat-form-field {
                     width: 90%;
                     border: 1px solid rgba(0, 0, 0, 0.404);
-                    padding: 5px !important;
+                    padding: 5px 5px 0px 5px !important;
                     margin: 0 0 10px 0;
                     border-radius: 5px;
                     mat-label {

@@ -5,7 +5,7 @@
     <div class="header_content ">
         <p class="header_content_subheading">Make the most of your professional life</p>
     </div>
-    <div class="login_content">
+    <div class="login_content" *ngIf="!nextStep">
        
         <div class="form_container">
             <div class="input-container">
@@ -47,7 +47,7 @@
                         <a target="_blank" class="join-form__form-body-agreement-item-link">Privacy Policy</a>, 
                         and <a
                         target="_blank" class="join-form__form-body-agreement-item-link">Cookie Policy</a>. </span>
-                <button mat-button class="form-button" [disabled]="getErrorMessage() !== ''">Agree & Join</button>
+                <button mat-button class="form-button" [disabled]="getErrorMessage() !== ''" (click)="nextStep = !nextStep">Agree & Join</button>
             </div>
 
         </div>
@@ -61,6 +61,37 @@
             <!-- <div><a href="/checkpoint/rp/request-password-reset" class="forgot-button">Forgot
                     password?</a></div>-->
             <p>Already on Job App? <a href="/signup/cold-join" tabindex="0" class="join-now">Sign in</a></p> 
+        </div>
+    </div>
+
+    <div class="login_content" *ngIf="nextStep">
+    
+        <div class="form_container" >
+            <div class="error_message" *ngIf="showErrorMessage">
+               <span>{{ getContinueResponse() }}</span> 
+            </div>
+            <div class="input-container">
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input matInput [formControl]="first_name">
+                    <button mat-icon-button matSuffix style="opacity: 0; cursor:default;">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+    
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput [formControl]="last_name">
+                    <button mat-icon-button matSuffix style="opacity: 0; cursor:default;">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-button class="form-button" [disabled]="getContinueResponse() !== ''" (click)="signUp()">Continue</button>
+            </div>
+    
+        </div>
+        <div class="footer-app-content-actions">
         </div>
     </div>
 </section>
