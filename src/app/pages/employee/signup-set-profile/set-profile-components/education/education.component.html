@@ -1,0 +1,44 @@
+<div id="personal-details" [formGroup]="regForm" class="form_details">
+    <div class="left_part">
+        <div class="form-group" formGroupName="education">
+            <label>High School education</label>
+            <input type="text" class="form-control" formControlName="highschool">
+        </div>
+        <div class="form-group" formGroupName="education">
+            <label>College Education</label>
+            <input type="text" class="form-control" formControlName="college">
+        </div>
+        <div class="form-group" formGroupName="education">
+            <label>Date Graduated (College)</label>
+            <div class="date_picker">
+                <input [matDatepicker]="picker" formControlName="college_graduation_date">
+                <mat-datepicker-toggle matSuffix [for]="picker" class="icon_picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+        </div>
+        <div class="form-group" formGroupName="education">
+            <label>Bachelors Degree</label>
+            <input type="text" class="form-control" formControlName="college_degree">
+        </div>
+    </div>
+    <div class="right_part">
+        <div class="form-group" formGroupName="education">
+            <label>Masters Education</label>
+            <input type="text" class="form-control" formControlName="masteral">
+        </div>
+        <div class="form-group" formGroupName="education">
+            <label>Date Graduated (Masteral)</label>
+            <div class="date_picker">
+                <input [matDatepicker]="Masteralpicker" formControlName="masteral_graduation_date">
+                <mat-datepicker-toggle matSuffix [for]="Masteralpicker" class="icon_picker"></mat-datepicker-toggle>
+                <mat-datepicker #Masteralpicker></mat-datepicker>
+            </div>
+        </div>
+        <div class="form-group" formGroupName="education">
+            <label>Masteral Degree</label>
+            <input type="text" class="form-control" formControlName="masteral_degree">
+        </div>
+    </div>
+</div>
+<br />
+<button mat-button matStepperNext [disabled]="!checkForm()" (click)="submitted()" class="next_button">Next</button>

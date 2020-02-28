@@ -1,0 +1,9 @@
+.next_button {
+    width: 100%;
+    background: rgb(3,168,91);
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+.next_button:disabled {
+    background: rgba(3, 168, 91, 0.356);
+}

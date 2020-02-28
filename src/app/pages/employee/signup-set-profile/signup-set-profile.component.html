@@ -1,1 +1,32 @@
-<p>signup-set-profile works!</p>
+
+<div class="header_logo">
+    <div class="logo">
+        <img src="assets/imgs/logo.png">
+    </div>
+</div>
+<div class="signup_steps" fxLayoutAlign="center center" fxLayout="column"> 
+    <form id="regForm" [formGroup]="registrationForm" class="registration_form">
+    <mat-horizontal-stepper labelPosition="bottom"  class="steps">
+        
+        <mat-step formGroupName="personalDetails" [stepControl]="registrationForm.get('personalDetails')" >
+                <ng-template matStepLabel>Personal Details</ng-template>
+                <app-personal-details [regForm]="registrationForm"></app-personal-details>
+        </mat-step>
+        <mat-step formGroupName="education" [stepControl]="registrationForm.get('education')">
+            <ng-template matStepLabel>Education</ng-template>
+            <app-education [regForm]="registrationForm"></app-education>
+        </mat-step>
+        <mat-step  formGroupName="experience" [stepControl]="registrationForm.get('experience')">
+            <ng-template matStepLabel>Work Experience</ng-template>
+            <app-work-experience [regForm]="registrationForm"></app-work-experience>
+        </mat-step>
+        <mat-step  formGroupName="resume" [stepControl]="registrationForm.get('resume')">
+            <ng-template matStepLabel>Resume</ng-template>
+            <app-resume [regForm]="registrationForm"></app-resume>
+        </mat-step>
+    </mat-horizontal-stepper>
+    </form>
+</div>
+<footer class="nav_footer">
+
+</footer>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms'; 
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +16,7 @@ export class SignupComponent implements OnInit {
   first_name = new FormControl('', [Validators.required]);
   last_name = new FormControl('', [Validators.required]);
   showErrorMessage: boolean;
-  constructor() { }
+  constructor(public router: Router ) { }
 
   ngOnInit() {
 
@@ -48,6 +50,7 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
+    this.router.navigate(['/signup/set-up']);
     if (this.getContinueResponse() !== '') {
       this.showErrorMessage = true;
     }

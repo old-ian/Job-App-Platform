@@ -39,11 +39,11 @@ import { AppNavbarComponent } from './components/app-navbar/app-navbar.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Angular Material Components
-import {MatCheckboxModule} from '@angular/material';
+import { MatCheckboxModule, MatNativeDateModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
@@ -72,6 +72,11 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { JobApplicationsComponent } from './pages/employee/job-applications/job-applications.component';
 import { SearchJobsComponent } from './pages/employee/search-jobs/search-jobs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PersonalDetailsComponent } from './pages/employee/signup-set-profile/set-profile-components/personal-details/personal-details.component';
+import { EducationComponent } from './pages/employee/signup-set-profile/set-profile-components/education/education.component';
+import { WorkExperienceComponent } from './pages/employee/signup-set-profile/set-profile-components/work-experience/work-experience.component';
+import { ResumeComponent } from './pages/employee/signup-set-profile/set-profile-components/resume/resume.component';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [
@@ -99,7 +104,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppNavbarComponent,
     JobsComponent,
     JobApplicationsComponent,
-    SearchJobsComponent
+    SearchJobsComponent,
+    PersonalDetailsComponent,
+    EducationComponent,
+    WorkExperienceComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -114,7 +123,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
-    MatDatepickerModule,
+    MatDatepickerModule, 
+    MatNativeDateModule, 
     MatFormFieldModule,
     MatRadioModule,
     MatSelectModule,
@@ -141,7 +151,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [ApiService, JobService],
+  providers: [ApiService, JobService,
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { displayDefaultIndicatorType: false }
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

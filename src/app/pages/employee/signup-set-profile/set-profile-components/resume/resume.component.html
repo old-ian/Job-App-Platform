@@ -1,0 +1,7 @@
+<div class="form_details" [formGroup]="regForm">
+    <div class="form-group" formGroupName="resume">
+        <label>Resume</label>
+        <input class="form-pick" type="file" formControlName="file">
+    </div>
+</div>
+<button mat-button matStepperNext [disabled]="!checkForm()" (click)="submitted()" class="next_button">Done</button>
