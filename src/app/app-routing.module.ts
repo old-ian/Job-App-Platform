@@ -52,7 +52,7 @@ const routes: Routes = [
   { path: 'employer/company-login', component: CompanyLoginComponent },
   { path: 'employer/company-signup', component: CompanySignupComponent },
   { path: 'employer/company-notifications', component: CompanyNotificationsComponent },
-  { path: 'employer/company-profile', component: EmployeeProfileComponent },
+  { path: 'employer/employee-profile', component: EmployeeProfileComponent },
   { path: 'employer/company-job-offer', component: JobOfferComponent },
   { path: 'employer/company-job-request', component: JobRequestComponent },
   { path: 'employer/company-search-employee', component: SearchEmployeeComponent },
