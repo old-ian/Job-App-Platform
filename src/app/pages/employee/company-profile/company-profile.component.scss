@@ -142,15 +142,17 @@
 				width: 100%;
 				margin-top: 30px;
 				.content {
+					margin-bottom: 20px;
+					margin-left: 85px;
 					display: inline-flex;
 					width: 100%;
 					.employment {
 						width: 30%;
 					}
 					.info {
-						width: 70%;
-						h3:first-child {
-							font-weight: bold;
+						width: 60%;
+						color: rgb(120,120,120);
+						.orange {
 							color: rgb(230, 110, 12) !important;
 						}
 						.company {
