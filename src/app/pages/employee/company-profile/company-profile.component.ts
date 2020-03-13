@@ -12,7 +12,7 @@ export class CompanyProfileComponent implements OnInit {
     industry: 'Information Technology & Services', 
     companySize: '51-200 employees',
     type: 'Privately Held',
-    location: 'Placeholder location', ]
+    location: 'Placeholder location',} ]
     // industry: 'Computer / Information Technology (Software)', 
     // specialization: 'IT/Computer - Software', 
     // role: 'Software Engineer/Programmer', positionlevel: '1-4 Years Experienced Employee' },
