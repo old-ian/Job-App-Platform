@@ -40,14 +40,13 @@
 	<mat-card class="profile-education-content">
 		<mat-card-title><i class="fas fa-briefcase"></i>  Company Details</mat-card-title>
 		<mat-card-content class="texts">
-		<div *ngFor="let experience of experiences" class="experience-content">
+		<div *ngFor="let company of companyDetails" class="experience-content">
 			<div class="content">
 				<div class="employment">
-				<h5>{{ experience.employment }}</h5>
-				<h6>{{ experience.months}}</h6>
+				<h5><i class="fas fa-globe"></i>   Website</h5>
 			</div>
 			<div class="info">
-				<h3>{{ experience.position }}</h3>
+				<h3>{{ company.website }}</h3>
 
 				<div class="company">
 					<div class="company-info">
@@ -58,28 +57,7 @@
 						</h4>
 					</div>
 				</div>
-				<div class="company-employment-info">
-					<div class="employment-info">
-						<h6 class="title">Industry: </h6>
-						<h6>{{ experience.industry}}</h6>
-					</div>
-
-					<div class="employment-info">
-						<h6 class="title">Specialization: </h6>
-						<h6>{{ experience.specialization}}</h6>
-					</div>
-
-					<div class="employment-info">
-						<h6 class="title">Role: </h6>
-						<h6>{{ experience.role}}</h6>
-					</div>
-
-					<div class="employment-info">
-						<h6 class="title">Position-level: </h6>
-						<h6>{{ experience.positionlevel}}</h6>
-					</div>
-					
-				</div>
+				
 			</div>
 			</div>
 		</div>
