@@ -3,81 +3,27 @@
 
 
 <div class="container">
-	<!--PROFILE HEADER-->
-	<div class="profile-header">
-	<mat-card class="profile-header-content">
-		<img mat-card-image src="assets/imgs/cover.jpg" alt="Photo of a Shiba Inu">
-		<mat-card-content class="texts">
-			<div class="actions">
-				<div mat-card-avatar class="profile-photo"></div>
-			</div>
-			<div class="buttons">
-				<mat-card-actions class="buttons-content">
-					<button mat-button class="add-section" [matMenuTriggerFor]="menu">Add Profile Section <i class="fas fa-caret-down"></i></button>
-					<mat-menu  color="primary" #menu="matMenu" class="menu">
-					  <button mat-menu-item> <span class="item">Experience</span> <i class="fas fa-plus-circle"></i></button>
-					  <button mat-menu-item> <span class="item">Education</span> <i class="fas fa-plus-circle"></i></button>
-					  <button mat-menu-item> <span class="item">Skills</span> <i class="fas fa-plus-circle"></i></button>
-					  <button mat-menu-item> <span class="item">Additional Information</span> <i class="fas fa-plus-circle"></i></button>
-					  <button mat-menu-item> <span class="item">About</span> <i class="fas fa-plus-circle"></i></button>
-					</mat-menu>
-					<button mat-button class="pdf-section">Save as PDF</button>
-					<button mat-button class="edit-section"><i class="fas fa-pencil-alt"></i></button>
-				</mat-card-actions>
-			</div>
-			<h2>Jhon Ezekiel Doe</h2>
-			<h3>Software Engineer</h3>
-			<div class="contacts">
-				<h3>North California, United States of America</h3>
-				<h3 class="contact-link">Contact Info</h3>
-			</div>
-		</mat-card-content>
-		
-	</mat-card>
-	</div>
-
+	<h2 class="head">Job Seeking Preferences</h2>
 	<div class="profile-education">
 	<mat-card class="profile-education-content">
-		<mat-card-title><i class="fas fa-briefcase"></i>  Experience</mat-card-title>
+		<mat-card-title>Job Application Settings</mat-card-title>
 		<mat-card-content class="texts">
-		<div *ngFor="let experience of experiences" class="experience-content">
+		<div class="experience-content">
 			<div class="content">
-				<div class="employment">
-				<h5>{{ experience.employment }}</h5>
-				<h6>{{ experience.months}}</h6>
-			</div>
 			<div class="info">
-				<h3>{{ experience.position }}</h3>
-
 				<div class="company">
 					<div class="company-info">
 						<h4>
-							{{ experience.company }} |   
-						</h4>
-						<h4>   {{ experience.location }}
+							Save onsite application answers
 						</h4>
 					</div>
 				</div>
 				<div class="company-employment-info">
 					<div class="employment-info">
-						<h6 class="title">Industry: </h6>
-						<h6>{{ experience.industry}}</h6>
+						<mat-checkbox class="mat-checkbox">Allow LinkedIn to save the information you enter when applying to jobs directly on LinkedIn.</mat-checkbox>
 					</div>
 
-					<div class="employment-info">
-						<h6 class="title">Specialization: </h6>
-						<h6>{{ experience.specialization}}</h6>
-					</div>
-
-					<div class="employment-info">
-						<h6 class="title">Role: </h6>
-						<h6>{{ experience.role}}</h6>
-					</div>
-
-					<div class="employment-info">
-						<h6 class="title">Position-level: </h6>
-						<h6>{{ experience.positionlevel}}</h6>
-					</div>
+					
 					
 				</div>
 			</div>
