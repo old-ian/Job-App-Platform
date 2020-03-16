@@ -144,11 +144,10 @@
 				.content {
 					display: inline-flex;
 					width: 100%;
-					.employment {
-						width: 30%;
-					}
 					.info {
-						width: 70%;
+						width: 100%;
+						border: 2px solid lightgray;
+						padding: 30px;
 						h3:first-child {
 							font-weight: bold;
 							color: rgb(230, 110, 12) !important;
@@ -173,8 +172,9 @@
 							.employment-info {
 								display: inline-flex;
 								width: 100%;
-								.title {
-									width: 20%;
+								margin-left: 20px;
+								::ng-deep .mat-checkbox .mat-checkbox-frame {
+  									border-color: orange;
 								}
 							}
 						}
@@ -193,7 +193,10 @@
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
-.container { padding: 0px 30px !important;  }
+.container { padding: 0px 30px !important; 
+	.head {
+		margin-top:25px;
+	} }
 .profile-header { 
 		width: 100%;
 		margin-top: 30px;
