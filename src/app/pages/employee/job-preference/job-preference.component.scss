@@ -144,6 +144,7 @@
 				.content {
 					display: inline-flex;
 					width: 100%;
+					margin-top: 10px;
 					.info {
 						width: 100%;
 						border: 2px solid lightgray;
@@ -176,6 +177,15 @@
 								::ng-deep .mat-checkbox .mat-checkbox-frame {
   									border-color: orange;
 								}
+							}
+							.email{
+								width: 30%;
+							}
+							.phone{
+								width: 20%;
+							}
+							.phone-section{
+								margin-top:20px;
 							}
 						}
 					}
