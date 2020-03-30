@@ -86,8 +86,15 @@
 					color: rgb(146,145,143);
 					font-weight: bold;
 					font-size: 1rem;
+					transition: .3s;
 				}
-				.jobs:hover { cursor: pointer; }
+				.jobs:hover { 
+					cursor: pointer; 
+					border: 4px solid rgb(230, 229, 227);
+					background: #ffffff;
+					padding: 5px 20px;
+					transition: .3s;
+				}
 			}
 		}
 	}
@@ -131,6 +138,7 @@
 	.join-section-info {
 		width: 100%;
 		text-align: center;
+    	background-image: linear-gradient(to top, rgb(3,168,91), rgb(254,253,253));
 		img {
 			width: 90%;
 			margin: auto !important;
@@ -146,9 +154,11 @@
     li a{
       color: white;
       transition: color .2s;
+	  transition: .3s;
       &:hover{
         text-decoration:none;
 		color: rgb(230, 110, 12) !important;
+		transition: .3s;
         }
     }
   }  
@@ -156,13 +166,40 @@
     i{font-size: 25px;}
     a{
       color:white;
-      transition: color .2s;
+	  transition: color .2s;
+	  transition: .3s;
       &:hover{
-		color: rgb(230, 110, 12) !important;}
+		color: rgb(230, 110, 12) !important;
+		transition: .3s;
+	}
     }
   } 
   .location{
     i{font-size: 18px;}
   }
   .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+
+@media screen and (min-width: 1600px) {
+  .home-section-image {
+		width: 50%;
+		position: relative;
+		img {
+			position: absolute;
+			left: -100px;
+			height: 350px !important;
+		}
+	}
+}
+@media screen and (min-width: 1900px) {
+  .home-section-image {
+		width: 50%;
+		position: relative;
+		img {
+			position: absolute;
+			left: -100px;
+			height: 350px;
+		}
+	}
 }
