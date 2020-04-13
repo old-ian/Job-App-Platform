@@ -81,6 +81,8 @@ import { EducationComponent } from './pages/employee/signup-set-profile/set-prof
 import { WorkExperienceComponent } from './pages/employee/signup-set-profile/set-profile-components/work-experience/work-experience.component';
 import { ResumeComponent } from './pages/employee/signup-set-profile/set-profile-components/resume/resume.component';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { OpportunityPreferenceComponent } from './opportunity-preference/opportunity-preference.component';
+import { CommutePreferenceComponent } from './commute-preference/commute-preference.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +115,8 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     EducationComponent,
     WorkExperienceComponent,
     ResumeComponent,
+    OpportunityPreferenceComponent,
+    CommutePreferenceComponent,
   ],
   imports: [
     BrowserModule,
