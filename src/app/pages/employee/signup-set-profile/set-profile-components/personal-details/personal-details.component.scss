@@ -53,3 +53,28 @@
         }
     }
 }
+.avatar-panel {
+  display: flex;
+  justify-content: center;
+
+  .avatar-section {
+    width: 100px;
+    position: relative;
+    .avatar {
+      border-radius: 50%;
+      width:100px;
+      height: 100px;
+      object-fit: contain;
+      border: 1.5px solid rgba(37, 37, 37, 0.288);
+    }
+    button {
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      background: rgb(2, 145, 78);
+      color: #ffffff;
+      border: 1px solid rgba(37, 37, 37, 0.288);
+    }
+  }
+}

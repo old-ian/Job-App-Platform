@@ -1,4 +1,10 @@
 <div id="personal-details" [formGroup]="regForm" class="form_details">
+    <div class="avatar-panel">
+        <div class="avatar-section">
+            <img class="avatar" [src]="profileImage == '' ? 'assets/imgs/logo.png' : profileImage" alt="">
+            <button (click)="openModal(imageCropper)"><i class="fas fa-pencil-alt"></i></button>
+        </div>
+    </div>
     <div class="form-group" formGroupName="personalDetails" >
         <label>Middle Name</label>
         <input type="text" class="form-control" formControlName="middle_name">
@@ -22,3 +28,28 @@
 </div>
 <br />
 <button mat-button matStepperNext [disabled]="!checkForm()" (click)="submitted()" class="next_button" >Next</button>
+<ng-template #imageCropper>
+    <div class="modal-header">
+        <h3 class="modal-title pull-left">Upload Photo</h3>
+        <button type="button" class="close pull-right" (click)="modalRef.hide()"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <input type="file" (change)="fileChangeEvent($event)" hidden #uploader accept=".jpg, .JPG, .png, .PNG, .jpeg" />
+        <button class="btn btn-primary" (click)="uploader.click()">Select Photo</button>
+        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1"
+            format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
+            (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()" roundCropper="true"
+            [transform]="transform" [onlyScaleDown]="true" [canvasRotation]="canvasRotation" resizeToWidth="100"
+            resizeToHeigth="100">
+        </image-cropper>
+        <div class="btn-group">
+            <button class="btn btn-primary" (click)="rotateLeft()">Rotate Left</button>
+            <button class="btn btn-primary" (click)="rotateRight()">Rotate Rigth</button>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" (click)="uploadPhoto()" [disabled]="croppedImage ? false: true">Upload
+            Photo</button>
+    </div>
+</ng-template>

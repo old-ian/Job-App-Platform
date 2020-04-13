@@ -1,9 +1,107 @@
-.next_button {
-    width: 100%;
+::ng-deep {
+    .mat-calendar-body-selected {
+        background: rgb(3,168,91);
+    }
+}
+
+.form_details {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    .left_part, .right_part {
+        width: 50%;
+    }
+    .right_part {
+        margin-left: 10px;
+    }
+}
+.form-control:focus {
+    border-color: rgba(230, 110, 12, .5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(230, 110, 12, .5) !important;
+}
+
+form {
+    .notes__item {
+        padding: 10px;
+        margin-top: 10px;
+        color: #252525;
+        background: #ffffff;
+        .form_container {
+            width: 100%;
+            display: block;
+            .group_title {
+                display: flex;
+                width: 100%;
+                .actions {
+                    display: flex;
+                    margin-left: auto;
+                    .notes__actions {
+                        margin: 0px 10px;
+                        cursor: pointer;
+                        color: #4e4e4e;
+                        transition: .5s;
+                        padding: 5px 10px;
+                        border-radius: 30px;
+                    }
+                    .notes__actions:hover {
+                        transition: .3s;
+                        color: #ffffff !important;
+                        background: #252525;
+                    }
+                }
+            }
+            .form-group {
+                label {
+                    font-size: 0.8rem;
+                }
+                .date_picker {
+                        width: 100%;
+                        input {
+                            width: 80%;
+                            height: calc(1.5em + .75rem + 2px);
+                            padding: .375rem .75rem;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #495057;
+                            background-color: #fff;
+                            background-clip: padding-box;
+                            border: 1px solid #ced4da;
+                            border-radius: .25rem 0rem 0rem .25rem;
+                            border-right: none;
+                        }
+                        .icon_picker {
+                            width: 20%;
+                            padding: 7.5px 0px;
+                            border: 1px solid #ced4da;
+                            border-radius: 0rem .25rem .25rem 0rem; 
+                            border-left: none;
+                            color: #495057 !important;
+                            ::ng-deep .mat-icon-button {
+                                height: 30px !important;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}
+
+.button_actions {
+    display: flex;
+    width: 97%;
+    .next_button, .add_row_button {
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    .next_button {
     background: rgb(3,168,91);
-    color: #ffffff;
-    font-size: 1.1rem;
-}
-.next_button:disabled {
-    background: rgba(3, 168, 91, 0.356);
-}
+    }
+    .add_row_button {
+        background: rgba(230, 110, 12, 1);
+        margin-right: 3%;
+    }
+    .next_button:disabled {
+        background: rgba(3, 168, 91, 0.356);
+    }
+}   

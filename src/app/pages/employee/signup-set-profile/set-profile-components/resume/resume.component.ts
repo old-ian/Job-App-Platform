@@ -14,6 +14,8 @@ export class ResumeComponent implements OnInit {
   ngOnInit() {
   }
   checkForm() {
-    return this.regForm.get('resume').valid;
+  }
+  submit() {
+    console.log(this.regForm);
   }
 }

@@ -1,16 +1,48 @@
-<!-- <div id="personal-details" [formGroup]="regForm">
-    <div class="form-group" formGroupName="personalDetails">
-        <label>Firstname*</label>
-        <input type="text" class="form-control" formControlName="firstname">
-    </div>
-    <div class="form-group" formGroupName="personalDetails">
-        <label>MI</label>
-        <input type="text" class="form-control" formControlName="mi">
-    </div>
-    <div class="form-group" formGroupName="personalDetails">
-        <label>Lastname*</label>
-        <input type="text" class="form-control" formControlName="lastname">
-    </div>
-</div>
+<form [formGroup]="regForm">
+        <mat-card  formArrayName="experience" *ngFor="let group of getFormControls.controls; let i = index"
+            class="col-sm-12 col-md-12 notes__item ">
+            <div class="form_container" [formGroupName]="i">
+                <div class="group_title">
+                    <div class="actions">
+                        <div class="notes__actions" (click)="deleteRow(i)">
+                            <i class="fa fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="group_title">
+                    <div class="form-group col-md-6">
+                        <label>Institution Name</label>
+                        <input type="text" class="form-control" formControlName="organizationName">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Job Title</label>
+                        <input type="text" class="form-control" formControlName="jobTitle">
+                    </div>
+                </div>
+                <div class="group_title">
+                        <div class="form-group  col-md-6">
+                            <label>Date Started</label>
+                            <div class="date_picker">
+                                <input [matDatepicker]="dateStartedpicker" formControlName="dateStarted">
+                                <mat-datepicker-toggle matSuffix [for]="dateStartedpicker" class="icon_picker"></mat-datepicker-toggle>
+                                <mat-datepicker #dateStartedpicker></mat-datepicker>
+                            </div>
+                        </div>
+
+                        <div class="form-group  col-md-6">
+                            <label>Date Finished</label>
+                            <div class="date_picker">
+                                <input [matDatepicker]="DateFinishedpicker" formControlName="dateFinished">
+                                <mat-datepicker-toggle matSuffix [for]="DateFinishedpicker" class="icon_picker"></mat-datepicker-toggle>
+                                <mat-datepicker #DateFinishedpicker></mat-datepicker>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </mat-card >
+</form>
 <br />
-<button mat-button matStepperNext (click)="submitted()" class="next_button">Next</button> -->
+<div class="button_actions">
+    <button mat-button (click)="addRow()" class="add_row_button col-md-6 col-sm-12">Add Row</button>
+    <button mat-button matStepperNext [disabled]="!checkForm()" (click)="submit()" class="next_button col-md-6 col-sm-12">Next</button>
+</div>

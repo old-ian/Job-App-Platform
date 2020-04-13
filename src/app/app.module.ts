@@ -38,6 +38,10 @@ import { JobService } from './services/job/job.service';
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//3rd party libraries
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 //Angular Material Components
 import { MatCheckboxModule, MatNativeDateModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
@@ -63,7 +67,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
@@ -108,7 +112,7 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     PersonalDetailsComponent,
     EducationComponent,
     WorkExperienceComponent,
-    ResumeComponent
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,
@@ -149,13 +153,16 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ImageCropperModule,
+    ModalModule.forRoot(),
   ],
   providers: [ApiService, JobService,
     {
       provide: STEPPER_GLOBAL_OPTIONS,
       useValue: { displayDefaultIndicatorType: false }
-    }],
+    },
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,7 @@
+.container_content {
+    background: rgba(241, 241, 241, 0.259)  !important;
+    height: 100vh;
+}
 ::ng-deep {
     .mat-stepper-label-position-bottom .mat-stepper-horizontal-line {
         background: rgba(128, 128, 128, 0.25) !important;
@@ -23,7 +27,7 @@
     }   
     .mat-horizontal-stepper-content {
         margin: auto;
-        width: 30%;
+        width: 40%;
     }
 } 
 .header_logo {
