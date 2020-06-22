@@ -1,0 +1,44 @@
+::ng-deep{
+    .mat-dialog-container{
+        display: block;
+        padding: 24px;
+        border-radius: 4px;
+        /* box-sizing: border-box; */
+        overflow: auto;
+        outline: 0;
+        width: 450px !important;
+        height: 100%;
+        min-height: inherit;
+        max-height: inherit;
+        background-color: white !important;
+        color: gray;
+    }
+
+    .matdialog-image{
+        width: 100%;  
+        height: auto;
+    }
+    
+    
+}
+
+::ng-deep{
+    .mat-list-item{
+        color:gray !important;
+        font-size: 13px !important;
+        padding: 4px 4px 4px 4px;
+    }
+
+    .mat-list-item{
+        max-height: 25px !important;
+      }
+}
+
+.float-right{
+
+    font-weight: bold;
+    color: black;
+    height: 15px;
+    margin-top: -28px;
+    padding-right: -25px;
+}

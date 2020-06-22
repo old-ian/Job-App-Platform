@@ -1,0 +1,31 @@
+<mat-dialog-content></mat-dialog-content>
+<button mat-button mat-dialog-close mat-dialog-close="true" class="float-right"> X </button>
+<img class="matdialog-image" src="assets/imgs/picmat.jpg">
+<div class="row">
+    <div class="col-md-3">
+        <mat-list>
+            <mat-list-item><b>Name:</b></mat-list-item>
+            <mat-list-item><b>Position:</b></mat-list-item>
+            <mat-list-item><b>Company:</b></mat-list-item>
+            <mat-list-item><b>Specialization:</b></mat-list-item>
+            <mat-list-item><b>Position:</b></mat-list-item>
+            <mat-list-item><b>Deegree:</b></mat-list-item>
+            <mat-list-item><b>Location:</b></mat-list-item>
+            <mat-list-item><b>Experinced:</b></mat-list-item>
+        </mat-list>
+    </div>
+    <div class="col-md-9">
+        <mat-list>
+            <mat-list-item>{{ data.name}}</mat-list-item>
+            <mat-list-item>{{ data.position}} </mat-list-item>
+            <mat-list-item>{{ data.company }} </mat-list-item>
+            <mat-list-item>{{ data.specialization}}</mat-list-item>
+            <mat-list-item>{{ data.positionlevel }}</mat-list-item>
+            <mat-list-item>{{ data.degree }}</mat-list-item>
+            <mat-list-item>{{ data.location }}</mat-list-item>
+            <mat-list-item>{{ data.months }}</mat-list-item>
+        </mat-list>
+    </div>
+</div>
+<mat-dialog-actions>
+</mat-dialog-actions>

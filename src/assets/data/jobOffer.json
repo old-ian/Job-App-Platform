@@ -1,0 +1,45 @@
+[
+
+    {
+      "id": 1, 
+      "position": "Back-End Web developer",
+      "salary": 18000, 
+      "qualifications": ["Skillful", "Leadership", "Has creativeness"],
+      "descriptions": "Lorem Ipsum",
+      "date" : "June 04, 2020",
+      "status" : "open",
+      "applicants": 2
+      },
+      {
+        "id": 2, 
+        "position": "Front-End Web developer",
+        "salary": 18000, 
+        "qualifications": ["Skillful", "Leadership", "Has creativeness"],
+        "descriptions": "Lorem Ipsum",
+        "date" : "June 04, 2020",
+        "status" : "close" ,
+        "applicants": 2
+      },
+      {
+        "id": 3,
+        "position": "Software Engineer",
+        "salary": 18000,
+        "qualifications": ["Skillful", "Leadership", "Has creativeness"],
+        "descriptions": "Lorem Ipsum",
+        "date" : "June 04, 2020",
+        "status" : "open" ,
+        "applicants": 2
+      }
+      ,
+      {
+        "id": 4,
+        "position": "Software Engineer",
+        "salary": 18000,
+        "qualifications": ["Skillful", "Leadership", "Has creativeness"],
+        "descriptions": "Lorem Ipsum",
+        "date" : "June 04, 2020",
+        "status" : "close" ,
+        "applicants": 2
+      }  
+
+  ]

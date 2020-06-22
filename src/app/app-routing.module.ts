@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 // COMPONENTS
 // EMPLOYEE
 import { LandingComponent } from './pages/landing/landing.component';
@@ -22,7 +23,12 @@ import { CompanyLoginComponent } from './pages/company/company-login/company-log
 import { CompanySignupComponent } from './pages/company/company-signup/company-signup.component';
 import { CompanyNotificationsComponent } from './pages/company/company-notifications/company-notifications.component';
 import { EmployeeProfileComponent } from './pages/company/employee-profile/employee-profile.component';
-import { JobOfferComponent } from './pages/company/job-offer/job-offer.component';
+import { CreateJobOfferComponent } from './pages/company/job-offer/create-job-offer/create-job-offer.component';
+
+import { JobOfferByNameComponent } from './pages/company/job-offer/job-offer-by-name/job-offer-by-name.component';
+
+import { JobOfferComponent} from './pages/company/job-offer/job-offer/job-offer.component';
+
 import { JobRequestComponent } from './pages/company/job-request/job-request.component';
 import { SearchEmployeeComponent } from './pages/company/search-employee/search-employee.component';
 
@@ -54,6 +60,8 @@ const routes: Routes = [
   { path: 'employer/company-notifications', component: CompanyNotificationsComponent },
   { path: 'employer/employee-profile', component: EmployeeProfileComponent },
   { path: 'employer/company-job-offer', component: JobOfferComponent },
+  { path: 'employer/company-job-offer-create', component: CreateJobOfferComponent },
+  { path: 'employer/company-job-offer-by-name/:id', component: JobOfferByNameComponent  },
   { path: 'employer/company-job-request', component: JobRequestComponent },
   { path: 'employer/company-search-employee', component: SearchEmployeeComponent },
 

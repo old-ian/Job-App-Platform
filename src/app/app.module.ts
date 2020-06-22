@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { UiSwitchModule } from 'ngx-toggle-switch';
+import {  JofferService } from "./joffer.service";
+
 
 // ROUTING
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +30,7 @@ import { JobsComponent } from './pages/employee/jobs/jobs.component';
 // COMPANY
 import { JobRequestComponent } from './pages/company/job-request/job-request.component';
 import { SearchEmployeeComponent } from './pages/company/search-employee/search-employee.component';
-import { JobOfferComponent } from './pages/company/job-offer/job-offer.component';
+
 import { EmployeeProfileComponent } from './pages/company/employee-profile/employee-profile.component';
 import { CompanyNotificationsComponent } from './pages/company/company-notifications/company-notifications.component';
 import { CompanyLoginComponent } from './pages/company/company-login/company-login.component';
@@ -83,6 +87,25 @@ import { ResumeComponent } from './pages/employee/signup-set-profile/set-profile
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { OpportunityPreferenceComponent } from './pages/employee/opportunity-preference/opportunity-preference.component';
 import { CommutePreferenceComponent } from './pages/employee/commute-preference/commute-preference.component';
+import { CreateJobOfferComponent } from './pages/company/job-offer/create-job-offer/create-job-offer.component';
+import { JobOfferByNameComponent } from './pages/company/job-offer/job-offer-by-name/job-offer-by-name.component';
+import { NgxTagsInputModule } from 'ngx-tags-input';
+import { TagInputModule } from 'ngx-chips';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { JobOfferComponent } from './pages/company/job-offer/job-offer/job-offer.component';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { NgxPaginationModule} from 'ngx-pagination';
+import { ApplicantsViewComponent } from './pages/company/job-offer/Job-offer-modals/applicants-view/applicants-view.component';
+import { ApplicantsUpdateComponent } from './pages/company/job-offer/Job-offer-modals/applicants-update/applicants-update.component';
+import { InterviewsViewComponent } from './pages/company/job-offer/Job-offer-modals/interviews-view/interviews-view.component';
+import { InterviewsUpdateComponent } from './pages/company/job-offer/Job-offer-modals/interviews-update/interviews-update.component';
+import { InviteViewComponent } from './pages/company/job-offer/Job-offer-modals/invite-view/invite-view.component';
+import { InviteUpdateComponent } from './pages/company/job-offer/Job-offer-modals/invite-update/invite-update.component';
+import { RejectViewComponent } from './pages/company/job-offer/Job-offer-modals/reject-view/reject-view.component';
+import { RejectUpdateComponent } from './pages/company/job-offer/Job-offer-modals/reject-update/reject-update.component';
+
 
 @NgModule({
   declarations: [
@@ -101,7 +124,7 @@ import { CommutePreferenceComponent } from './pages/employee/commute-preference/
     CompanyProfileComponent,
     JobRequestComponent,
     SearchEmployeeComponent,
-    JobOfferComponent,
+    
     EmployeeProfileComponent,
     LandingComponent,
     CompanyNotificationsComponent,
@@ -117,7 +140,30 @@ import { CommutePreferenceComponent } from './pages/employee/commute-preference/
     ResumeComponent,
     OpportunityPreferenceComponent,
     CommutePreferenceComponent,
+    CreateJobOfferComponent,
+    JobOfferByNameComponent,
+    JobOfferComponent,
+    JobOfferComponent,
+    ApplicantsViewComponent,
+    ApplicantsUpdateComponent,
+    InterviewsViewComponent,
+    InterviewsUpdateComponent,
+    InviteViewComponent,
+    InviteUpdateComponent,
+    RejectViewComponent,
+    RejectUpdateComponent,
   ],
+
+  entryComponents :[
+     ApplicantsViewComponent, 
+     ApplicantsUpdateComponent, 
+     InterviewsUpdateComponent,
+     InterviewsViewComponent,
+     InviteUpdateComponent,
+     InviteViewComponent,
+     RejectUpdateComponent,
+     RejectViewComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -160,8 +206,23 @@ import { CommutePreferenceComponent } from './pages/employee/commute-preference/
     MatPaginatorModule,
     ImageCropperModule,
     ModalModule.forRoot(),
+    NgxTagsInputModule,
+    TagInputModule, 
+    HttpClientModule,
+    UiSwitchModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule,
+    NgxPaginationModule,
+
+     TabsModule.forRoot(),
+    
+     PaginationModule.forRoot(),
+
+   
+
   ],
-  providers: [ApiService, JobService,
+  providers: [ApiService, JofferService,
     {
       provide: STEPPER_GLOBAL_OPTIONS,
       useValue: { displayDefaultIndicatorType: false }

@@ -7,7 +7,18 @@
   </form>
 </nav>
 
+<app-root></app-root>
 
+<div class="container" *ngFor="let jobOffer of  jobOffers">
+    <br>
+    {{ jobOffer.id }}<br>
+    {{ jobOffer.position }}<br>
+    {{ jobOffer.salary }}<br>
+    {{ jobOffer.qualifications }}<br>
+    <br>
+
+
+</div>
 
 <div class="containerAll">
 	<div class="home-section">
