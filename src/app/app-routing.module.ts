@@ -31,6 +31,7 @@ import { JobOfferComponent} from './pages/company/job-offer/job-offer/job-offer.
 
 import { JobRequestComponent } from './pages/company/job-request/job-request.component';
 import { SearchEmployeeComponent } from './pages/company/search-employee/search-employee.component';
+import { EditJobOfferComponent } from './pages/company/job-offer/edit-job-offer/edit-job-offer.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,7 @@ const routes: Routes = [
   { path: 'employer/employee-profile', component: EmployeeProfileComponent },
   { path: 'employer/company-job-offer', component: JobOfferComponent },
   { path: 'employer/company-job-offer-create', component: CreateJobOfferComponent },
+  { path: 'employer/company-job-offer-edit', component: EditJobOfferComponent },
   { path: 'employer/company-job-offer-by-name/:id', component: JobOfferByNameComponent  },
   { path: 'employer/company-job-request', component: JobRequestComponent },
   { path: 'employer/company-search-employee', component: SearchEmployeeComponent },

@@ -1,5 +1,4 @@
 <div class="body">
-<app-app-navbar></app-app-navbar>
 
 <div class="container">
 	<!--PROFILE HEADER-->
@@ -7,7 +6,7 @@
 	<div class="profile-header">
 		<mat-card class="profile-header-content">
 			<img mat-card-image src="assets/imgs/cover.jpg" alt="Photo of a Shiba Inu">
-			<mat-card-content class="texts">
+			<mat-card-content class="texts mb-2">
 				<div class="actions">
 					<div mat-card-avatar class="profile-photo"></div>
 				</div>
@@ -19,7 +18,7 @@
 				</div>
 			</mat-card-content>
 			<mat-card-footer class="profile-content-footer">
-				<h3 routerLink="/saved-jobs"><i class="far fa-bookmark"></i> Saved Jobs</h3>
+				<h3 class="pt-2" routerLink="/saved-jobs"><i class="far fa-bookmark"></i> Saved Jobs</h3>
 			</mat-card-footer>
 		</mat-card>
 		<!-- Applied Jobs -->
@@ -46,7 +45,7 @@
 	            <hr class="card-notif-body">
 			    </div>
 				<p class="notif-footer" >
-				You’re all caught up!Check back later for new notifications
+				You’re all caught up! Check back later for new notifications
 				</p>
 			</mat-card-content>
 		 </mat-card>
@@ -74,20 +73,20 @@
 		   <mat-card class="mat-card-2" *ngFor="let  sample of samples">
 		   <mat-card-content class="card-content mat-card-1-content " >
              <div class="row notif-body" >
-                  <div class="col-md-2">
+                  <div class="col-md-2 pt-2">
                     <img src="{{sample.image}}" class="rounded-circle img-notif"  height="50px" width="50px" />
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 pt-2">
                 	<p class="text-notif">
                 	<a routerLink="">
-                    <b>{{sample.name}}</b>
+                    {{sample.name}}
                     </a>
                     <br>
                 	Viewed your profile<br>
                     Notification details here..... 
                     </p>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 pt-3">
                  	<p class="text-notif"> 
                  	2 hrs ago<br>
                     May 20, 2021  
@@ -99,24 +98,24 @@
 	</div>
 
 	<div class="top-companies">
-		<div class="container top_comp_title"  >
-			<p class="top_comp_name">Top Companies</p>
+		<div class="mat-card container top_comp_title"  >
+			<p class="top_comp_name text-secondary">Top Companies</p>
 			<hr class="top_comp_name_divider">
             <p class="top_comp_sub_title">Here's a great opportunity awaits you</p>
 		</div>
-		<div class="container company-list-name-card">
+		<div class="mat-card container company-list-name-card">
         <ul class="list-group list-group-flush" *ngFor="let company of companies" >
 		  <li class="list-group-item d-flex justify-content-between align-items-center company-list">
 		      <p class="company-list-name">{{ company.name }}</p>
 		    <a routerLink="">
-		    <span class="badge badge-primary badge-pill">apply now</span>
+		    <span class="badge badge-primary badge-pill">Apply now</span>
 		    </a>
 		  </li>
 		</ul>
 		</div>
 		<mat-card class="dis_work_card">
 	  		<mat-card-content class="">
-			    <p><b class="dis_work_title">Discover more than just a workplace</b></p>
+			    <p class="mb-2"><b class="dis_work_title text-secondary">Discover more than just a workplace</b></p>
 				<p class="comp_search_title"> 
 				<input type="search" name="search" class="form-control search-input" placeholder="Search for a Company...">
                  <br>
