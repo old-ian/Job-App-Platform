@@ -5,50 +5,41 @@
         max-width: 1528px;
         margin: auto;
         display: flex !important;
-          .navbar-brand{
-        padding: 5px 10px;
-        margin-right: 5px !important;
-		img {
-			height:50px;
-		    }
+        .navbar-brand {
+            padding: 5px 10px;
+            margin-right: 5px !important;
+            img {
+                height: 50px;
+            }
         }
         .input {
             width: 600px;
-                .input-group {
-                    input {
-                        width: 300px !important;
-                    }
+            .input-group {
+                input {
+                    width: 300px !important;
                 }
+            }
         }
         .nav-list {
             list-style-type: none;
             display: flex;
             margin: 0px auto;
             li {
-                margin: 5px 5px 0px 5px;
-                padding: 10px 10px 3px 10px;
-                width: 80px;
+                text-align: center;
                 i {
-                    text-align: center;
-                    width: 100%;
+                    font-size: 30px;
                     color: #ffffff;
-                    font-size: 23px;
                 }
                 a {
-                    font-size: 15px;
-                    font-family:  'Helvetica';
-                    line-height: 1.33333;
-                    display: block;
                     color: #ffffff;
-                    font-weight: 400;
-                    text-align: center;
-                    width: 100%;
                 }
             }
             li:hover {
                 cursor: pointer;
             }
+            li:focus{
+                outline: none;
+            }
         }
     }
-
 }

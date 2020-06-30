@@ -105,6 +105,7 @@ import { InviteViewComponent } from './pages/company/job-offer/Job-offer-modals/
 import { InviteUpdateComponent } from './pages/company/job-offer/Job-offer-modals/invite-update/invite-update.component';
 import { RejectViewComponent } from './pages/company/job-offer/Job-offer-modals/reject-view/reject-view.component';
 import { RejectUpdateComponent } from './pages/company/job-offer/Job-offer-modals/reject-update/reject-update.component';
+import { EditJobOfferComponent } from './pages/company/job-offer/edit-job-offer/edit-job-offer.component';
 
 
 @NgModule({
@@ -152,6 +153,7 @@ import { RejectUpdateComponent } from './pages/company/job-offer/Job-offer-modal
     InviteUpdateComponent,
     RejectViewComponent,
     RejectUpdateComponent,
+    EditJobOfferComponent,
   ],
 
   entryComponents :[
