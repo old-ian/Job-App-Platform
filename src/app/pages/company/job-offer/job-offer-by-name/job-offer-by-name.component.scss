@@ -1,325 +1,344 @@
-::ng-deep .menu {
-  background: #ffffff!important;
- button {
-  color: #000000;
-   font-family: helvetica;
-   font-size: .8rem;
-   font-weight: bold;
-   display: inline-flex;
-   width: 100%;
-   border-bottom: 1px solid rgba(187, 187, 187, 0.808);
-   .item {
-     width: 90%;
-     margin-left: 10px;
-   }
-   i {
-     width: 10%;
-     float: right;
-     margin: auto;
-     text-align: right;
-     font-size: .8rem;
-   }
- }
- button:last-child { border: none; }
+.mat-card-title{
+  color: rgb(230, 110, 12) !important;
 }
-.header-actions{
+
+::ng-deep .menu {
+  background: #ffffff !important;
+  button {
+    color: #000000;
+    font-family: helvetica;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.808);
+    .item {
+      width: 90%;
+      margin-left: 10px;
+    }
+    i {
+      width: 10%;
+      float: right;
+      margin: auto;
+      text-align: right;
+      font-size: 0.8rem;
+    }
+  }
+  button:last-child {
+    border: none;
+  }
+}
+.header-actions {
   margin-top: -10px;
 }
 
-::ng-deep{
-	.cdk-mouse-focused{
-       display:none !important;
-	}
-
-	.mat-button-ripple-round{
-       display:none !important;
-	}
-}
-::ng-deep{
-  .mat-standard-chip{ 
-    font-size: 12px !important;
-    margin : 0px !important;
-    min-height: 25px !important;
-    font-family: Helvetica !important;
-	  letter-spacing: 0 !important;
-
+::ng-deep {
+  .cdk-mouse-focused {
+    display: none !important;
   }
 
- 
+  .mat-button-ripple-round {
+    display: none !important;
+  }
 }
-::ng-deep{
-  .mat-chip.mat-standard-chip{
-     background-color: rgb(230, 110, 12) !important;
-     margin-left: 3px !important;
+::ng-deep {
+  .mat-standard-chip {
+    font-size: 12px !important;
+    margin: 0px !important;
+    min-height: 25px !important;
+    font-family: Helvetica !important;
+    letter-spacing: 0 !important;
+  }
+}
+::ng-deep {
+  .mat-chip.mat-standard-chip {
+    background-color: rgb(230, 110, 12) !important;
+    margin-left: 3px !important;
   }
 }
 
 /// ==============angular tabs
 
-::ng-deep{
-	.mat-tab-label{
-		color:  rgb(230, 110, 12) !important;
+::ng-deep {
+  .mat-tab-label {
+    color: rgb(230, 110, 12) !important;
     background-color: transparent !important;
-    width: 100%;
-	}
-	.mat-ink-bar{
-		background-color: rgb(230, 110, 12) !important;
-		transition: none !important;
-	   
-	}
-   
-	 .mat-tab-body-content{
-		overflow: hidden !important;
-		overflow-x: hidden;
-         overflow-y: hidden;
-	 }
+  }
+  .mat-ink-bar {
+    background-color: rgb(230, 110, 12) !important;
+    transition: none !important;
+  }
 
-	 .mat-tab-label.mat-tab-label-active {
-		color:  rgb(230, 110, 12) !important;
-		background-color: transparent !important;
-		opacity: 1 !important;	
-	
+  .mat-tab-body-content {
+    overflow: hidden !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .mat-tab-label.mat-tab-label-active {
+    color: rgb(230, 110, 12) !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
   }
 }
 
 //============= PAGINATOR ========================
 
-
-::ng-deep{
-
-  .mat-paginator-container{
+::ng-deep {
+  .mat-paginator-container {
     background-color: white;
   }
-	.currentItemsToShow2{
-		color: gray;
-		opacity: 1px !important;
-	}
-	.ng-tns-c10-15 .ng-star-inserted{
-		color: gray !important;
-	}
-	 
-	.mat-paginator-icon{
-		color: gray !important; 
-		margin-top: -15px !important;
-	}
-	
-	.mat-paginator-page-size .ng-star-inserted{
-	   margin-top: -10px;
-	   color: gray !important; 
-	}
-
-	
-	.mat-paginator-range-label{
-		margin-top: -15px !important;
-		color: gray !important; 
-		
-	}
-
-	.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option{
-		background-color : white !important;
-		
+  .currentItemsToShow2 {
+    color: gray;
+    opacity: 1px !important;
+  }
+  .ng-tns-c10-15 .ng-star-inserted {
+    color: gray !important;
   }
 
-  .mat-option{
-    color:gray;
+  .mat-paginator-icon {
+    color: gray !important;
+    margin-top: -15px !important;
   }
-  
-  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
-    color:gray;
-  }
-	.mat-select-arrow{
-	   color : gray !important;
-	}
-	.mat-form-field-underline{
-		background-color : gray !important;
-		color: gray !important;
-	}
 
+  .mat-paginator-page-size .ng-star-inserted {
+    margin-top: -10px;
+    color: gray !important;
+  }
+
+  .mat-paginator-range-label {
+    margin-top: -15px !important;
+    color: gray !important;
+  }
+
+  .mat-select-panel .mat-optgroup-label,
+  .mat-select-panel .mat-option {
+    background-color: white !important;
+  }
+
+  .mat-option {
+    color: gray;
+  }
+
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: gray;
+  }
+  .mat-select-arrow {
+    color: gray !important;
+  }
+  .mat-form-field-underline {
+    background-color: gray !important;
+    color: gray !important;
+  }
 }
 
 // ==== table
 
-mat-table{
+mat-table {
   background-color: white;
   width: 90%;
 }
-.mat-cell, .mat-footer-cell{
-  color:gray;
+.mat-cell,
+.mat-footer-cell {
+  color: gray;
   font-size: 12px;
   text-align: center;
+  justify-content: center;
 }
-.mat-header-cell{
+.mat-header-cell {
   color: gray;
   font-size: 12px;
   height: 25px;
+  flex-direction: column;
+  justify-content: center;
 }
-.mat-header-row, .mat-row{
-  border-bottom-color:gray;
+.mat-header-row,
+.mat-row {
+  border-bottom-color: gray;
 }
-.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple){
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
   background-color: gray;
 }
-.mat-cell:first-of-type, mat-footer-cell:first-of-type, mat-header-cell:first-of-type{
+.mat-cell:first-of-type,
+mat-footer-cell:first-of-type,
+mat-header-cell:first-of-type {
   padding-left: 0px;
 }
 
-::ng-deep{
-  .mat-sort-header-button{
-    margin-right: -50px !important;
-  }
-}
+// ::ng-deep {
+//   .mat-sort-header-button {
+//     margin-right: -50px !important;
+//   }
+// }
 
 //==== btn ======
 
-.btn-action{
-    font-size: 9px !important;
+.btn-action {
+  font-size: 9px !important;
 }
 
+.body {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: Helvetica;
+}
 
-.body { 
-	background: #ECE9E6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	font-family: Helvetica;
- }
-
- 
- .container { 
-	padding: 0px 30px !important;
-	width: 800px;
-
+::ng-deep {
+  body {
+    background: linear-gradient(
+      to right,
+      #ffffff,
+      #ece9e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  
-  .home-content {
-    margin-top: 30px;
-  }
+}
 
-  .row-content{
+.container {
+  padding: 0px 30px !important;
+  width: 800px;
+}
+
+.home-content {
+  margin-top: 30px;
+}
+
+.row-content {
   margin-top: -30px;
-  }
+}
 
-  .list-content{
-   margin-top:-135px;
-  }
+.list-content {
+  margin-top: -135px;
+}
 
-  .badge{
+.badge {
   margin-right: -10px;
-  }
+}
 
-  .img{
-  height:90px; 
-  width:90px;
-  }
+.img {
+  height: 90px;
+  width: 90px;
+}
 
-  .job-title{
-    font-size: 17px;
-    font-weight: bold;
-    color: rgb(230, 110, 12) !important;
- }
+.job-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(230, 110, 12) !important;
+}
 
-  .list-group{
-    margin: 15px 15px 15px 15px;
-  }
-  .list-group-item{
-    border: none;
-    font-size: 13px;
-    margin-top:15px;
-  }
-
-  b{
-    margin-top: -2px;
-    margin-bottom: -2px;
-  }
-  p{
-    margin-top: -2px;
-    margin-bottom: -2px;
-  }
-  .job-offer-header{
-    color:gray;
-     cursor: pointer;
-       margin-left: 3%;
-       max-width: 100% !important;
-       min-width: 100% !important;
-     background: #ffffff;
-     border: .1px solid lightgray;
-     margin: 0px 10px 20px 10px;
-     padding: 0px !important;  
-    }
-
-
-.top-salary-header{
+.list-group {
+  margin: 15px 15px 15px 15px;
+}
+.list-group-item {
+  border: none;
+  font-size: 13px;
   margin-top: 15px;
 }
 
+b {
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+p {
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+.job-offer-header {
+  color: gray;
+  cursor: pointer;
+  margin-left: 3%;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  background: #ffffff;
+  border: 0.1px solid lightgray;
+  margin: 0px 10px 20px 10px;
+  padding: 0px !important;
+}
 
-.top-qualification-header{
+.top-salary-header {
+  margin-top: 15px;
+}
+
+.top-qualification-header {
   margin-top: -10px;
 }
 
-.top-desc-header{
+.top-desc-header {
   margin-top: -10px;
 }
 
-.top-company{
+.top-company {
   margin-top: -80px;
   font-weight: bold;
   font-size: 13px;
- }
+}
 
-
- .top-applicant{
+.top-applicant {
   margin-top: -83px;
   font-size: 12px;
- }
- .top-date{
+}
+.top-date {
   margin-top: -128px;
   font-size: 12px;
- }
+}
 
- .top-salary{
-   margin-top: -62px;
- }
+.top-salary {
+  margin-top: -62px;
+}
 
- .qaulification{
-  margin-top:-45px;
- }
+.qaulification {
+  margin-top: -45px;
+}
 
- .desc{
-    margin-top:-26px;
- }
+.desc {
+  margin-top: -26px;
+}
 
- .mat-btn{
+.mat-btn {
   font-size: 11px;
- }
+}
 
 //==========footer===================
 
-.footer{
-  background: rgb(3,168,91);
-  color:white;
-  
-  .links{
-    ul {list-style-type: none;}
-    li a{
+.footer {
+  background: rgb(3, 168, 91);
+  color: white;
+
+  .links {
+    ul {
+      list-style-type: none;
+    }
+    li a {
       color: white;
-      transition: color .2s;
-      &:hover{
-        text-decoration:none;
-    color: rgb(230, 110, 12) !important;
-        }
+      transition: color 0.2s;
+      &:hover {
+        text-decoration: none;
+        color: rgb(230, 110, 12) !important;
+      }
     }
-  }  
-  .about-company{
-    i{font-size: 25px;}
-    a{
-      color:white;
-      transition: color .2s;
-      &:hover{
-    color: rgb(230, 110, 12) !important;}
-    }
-  } 
-  .location{
-    i{font-size: 18px;}
   }
-  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+  .about-company {
+    i {
+      font-size: 25px;
+    }
+    a {
+      color: white;
+      transition: color 0.2s;
+      &:hover {
+        color: rgb(230, 110, 12) !important;
+      }
+    }
+  }
+  .location {
+    i {
+      font-size: 18px;
+    }
+  }
+  .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }

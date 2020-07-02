@@ -1,312 +1,113 @@
 <div class="body">
-<app-app-navbar></app-app-navbar>
-
-<div class="container" *ngFor="let jobOffer of  jobOffers">
-  <div class="home-content">
-      <div class="job-offer-header">
-        <ul class="list-group">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-           <img class="img" src="assets/imgs/logo.png" >
-          </li>
-        </ul>
-         <div class="row row-content" style="">
-             <div class="col-md-3">
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                 <b class="top-salary-header"> Salary:</b>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <b class="top-qualification-header">Qualification:</b>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <b class="top-desc-header">Description: </b>
-                </li>
-               </ul>
-             </div>
-             <div class="col-md-9 list-content">
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <h6 class="job-title">{{ jobOffer.position }}</h6>    
-                  <span class="badge">
-                      <div class="header-actions">
-                              <button mat-icon-button [matMenuTriggerFor]="menu"><i class="material-icons">more_vertz</i></button>
-                              <mat-menu color="primary" #menu="matMenu" class="menu" xPosition="before">
-                                  <button mat-menu-item><i class="far fa-bookmark"></i> <span class="item">Mark as Closed</span></button>
-                                  <button mat-menu-item><i class="far fa-bookmark"></i> <span class="item">Delete</span></button>
-                                    <button mat-menu-item><i class="far fa-bookmark"></i> <span class="item">Update</span></button>
-                              </mat-menu>
-                          </div>
-                    </span> 
-                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center ">
-                 <p class="top-company"><i class="fa fa-building-o" aria-hidden="true"></i>{{ jobOffer.company }}</p>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <p class="top-applicant"><b>Applicants:</b> ({{jobOffer.applicants}})</p> 
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <p class="top-date"><b>Posted:</b> {{ jobOffer.date }}</p> 
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center bottom-divider">
-                  <p class="top-salary">&#8369;{{ jobOffer.salary }}</p>
-                 </li>
-                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <mat-chip-list class="qaulification">
-                    <mat-chip *ngFor="let option of  qualifications">
-                      {{ option.name}}
-                    </mat-chip> 
-                   </mat-chip-list>
-                </li>
-                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                   <p class="desc">{{ jobOffer.descriptions }} </p>
-                 </li>
-               </ul>
-               <br>
+  <div class="container w-100">
+    <br>
+    <div class="row">
+      <div class="col-5">
+        <mat-card>
+          <div class="row">
+            <div class="col-9">
+              <mat-card-title-group>
+                <mat-card-title class="mb-0">{{jobOffers[0].position}}</mat-card-title>
+                <mat-card-subtitle class="text-dark"><i class="far fa-calendar-check"></i>&nbsp;{{jobOffers[0].date}} 
+                (<span class="text-dark">&#8369;{{jobOffers[0].salary}}</span>)</mat-card-subtitle>
+              </mat-card-title-group>
             </div>
-             </div>
-         </div>
-    </div>
-   
-
- 
-
-    <div class="home-content">
-      <div class="job-offer-header">
-        <mat-tab-group>
-          <mat-tab>
-            <ng-template mat-tab-label>
-               Applicants (4)
-            </ng-template>
-                <!--<div class="example-header">
-                  <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                  </mat-form-field>
-                </div>  -->
-                
-                <div class="example-container mat-elevation-z8 container">
-                  <mat-table [dataSource]="dataSource" matSort>
-                
-                  <!---- ID Column
-                    <ng-container matColumnDef="id">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-                    </ng-container>    -->
-                
-                      <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-                    </ng-container>
-                
-                    <!-- Date Column -->
-                    <ng-container matColumnDef="date">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
-                    </ng-container>
-      
-
-                    
-                    <!-- Action Column -->
-                    <ng-container matColumnDef="actions">
-                      <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
-                      <mat-cell *matCellDef="let row" >               <!--Modal pop up-->
-                            <button class="mat-btn" mat-button  (click)="ViewApplicant()">View</button> | 
-                            <button class="mat-btn" mat-button  (click)="UpdateApplicant()">Update</button>
-                      </mat-cell>
-                    </ng-container>
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns;">
-                    </mat-row>
-                  </mat-table>
-                  
-                  
-                  <mat-paginator [length]="100"
-                  [pageSize]="5"
-                  [pageSizeOptions]="[5, 10, 25, 100]">
-                  </mat-paginator>
-                </div>
-           </mat-tab>
-          <mat-tab>
-            <ng-template mat-tab-label>
-              Interviewed (2)
-            </ng-template>
-              <!--<div class="example-header">
-                  <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                  </mat-form-field>
-                </div>  -->
-                
-                <div class="example-container mat-elevation-z8 container">
-                  <mat-table [dataSource]="dataSource_int" matSort>
-                
-                  <!---- ID Column
-                    <ng-container matColumnDef="id">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-                    </ng-container>    -->
-                
-                      <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-                    </ng-container>
-                
-                    <!-- Date Column -->
-                    <ng-container matColumnDef="date">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
-                    </ng-container>
-      
-
-                    
-                    <!-- Action Column -->
-                    <ng-container matColumnDef="actions">
-                      <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
-                      <mat-cell *matCellDef="let row" >
-                            <button class="mat-btn" mat-button  (click)="ViewApplicant()">View</button> | 
-                            <button class="mat-btn" mat-button  (click)="UpdateApplicant()">Update</button>
-                      </mat-cell>
-                    </ng-container>
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns_int"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns_int;">
-                    </mat-row>
-                  </mat-table>
-                  
-                  
-                  <mat-paginator [length]="100"
-                  [pageSize]="5"
-                  [pageSizeOptions]="[5, 10, 25, 100]">
-                  </mat-paginator>
-                </div>
-          </mat-tab>
-          <mat-tab>
-            <ng-template mat-tab-label>
-                Invited (4)
-            </ng-template>
-                   <!--<div class="example-header">
-                  <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                  </mat-form-field>
-                </div>  -->
-                
-                <div class="example-container mat-elevation-z8 container">
-                  <mat-table [dataSource]="dataSource_invi" matSort>
-                
-                  <!---- ID Column
-                    <ng-container matColumnDef="id">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-                    </ng-container>    -->
-                
-                      <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-                    </ng-container>
-                
-                    <!-- Date Column -->
-                    <ng-container matColumnDef="date">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
-                    </ng-container>
-      
-
-                    
-                    <!-- Action Column -->
-                    <ng-container matColumnDef="actions">
-                      <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
-                      <mat-cell *matCellDef="let row" >
-                           <button class="mat-btn" mat-button  (click)="ViewApplicant()">View</button> | 
-                            <button class="mat-btn" mat-button  (click)="UpdateApplicant()">Update</button>
-                      </mat-cell>
-                    </ng-container>
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns_invi"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns_invi;">
-                    </mat-row>
-                  </mat-table>
-                  
-                  
-                  <mat-paginator [length]="100"
-                  [pageSize]="5"
-                  [pageSizeOptions]="[5, 10, 25, 100]">
-                  </mat-paginator>
-                </div>
-        
-          </mat-tab>
-          <mat-tab>
-            <ng-template mat-tab-label>
-               Rejected (3)
-            </ng-template>
-                   <!--<div class="example-header">
-                  <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                  </mat-form-field>
-                </div>  -->
-                
-                <div class="example-container mat-elevation-z8 container">
-                  <mat-table [dataSource]="dataSource_int" matSort>
-                
-                  <!---- ID Column
-                    <ng-container matColumnDef="id">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-                    </ng-container>    -->
-                
-                      <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-                    </ng-container>
-                
-                    <!-- Date Column -->
-                    <ng-container matColumnDef="date" class="date-column">
-                      <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
-                      <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
-                    </ng-container>
-      
-
-                    
-                    <!-- Action Column -->
-                    <ng-container matColumnDef="actions">
-                      <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
-                      <mat-cell *matCellDef="let row" >
-                            <button class="mat-btn" mat-button  (click)="ViewApplicant()">View</button> | 
-                            <button class="mat-btn" mat-button  (click)="UpdateApplicant()">Update</button>
-                      </mat-cell>
-                    </ng-container>
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns_rej"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns_rej;">
-                    </mat-row>
-                  </mat-table>
-                  
-                  
-                  <mat-paginator [length]="100"
-                  [pageSize]="5"
-                  [pageSizeOptions]="[5, 10, 25, 100]">
-                  </mat-paginator>
-                </div>
-         
-          </mat-tab>
-        </mat-tab-group>
+            <div class="col-3">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="ml-5">more_vertz</mat-icon>
+              </button>
+              <mat-menu color="primary" #menu="matMenu" class="menu" xPosition="before">
+                <button mat-menu-item>
+                  <i class="far fa-bookmark"></i>
+                  <span class="item">&nbsp;Mark as Closed</span>
+                </button>
+                <button mat-menu-item (click)="goToJob(Job.id)">
+                  <i class="far fa-eye"></i>
+                  <span class="item">&nbsp;View</span>
+                </button>
+                <button mat-menu-item>
+                  <i class="fas fa-times"></i>
+                  <span class="item">&nbsp;Delete</span>
+                </button>
+                <button mat-menu-item (click)="updateJobOffer(Job.id)">
+                  <i class="fas fa-pen-alt"></i>
+                  <span class="item">&nbsp;Update</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+          <mat-card-content>
+            <div class="mb-3">
+              {{jobOffers[0].descriptions}}
+            </div>
+            <mat-chip-list class="qaulification">
+              <mat-chip class="text-light" *ngFor="let option of  qualifications">
+                {{ option.name}}
+              </mat-chip>
+            </mat-chip-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-7">
+        <mat-card class="pb-0">
+          <mat-tab-group>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Applicants
+              </ng-template>
+              <table class="table table-striped small">
+                <thead>
+                  <tr>
+                    <td scope="col">Name</td>
+                    <td scope="col">Date</td>
+                    <td scope="col">Expected Salary</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let app of applicantsToShow, let i=index;">
+                    <th class="w-50">{{app.name}}</th>
+                    <td>{{app.date}}</td>
+                    <td>&#8369;18,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+              </mat-paginator>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Interviewed
+              </ng-template>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Considered
+              </ng-template>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Rejected
+              </ng-template>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card>
       </div>
     </div>
   </div>
 </div>
 
 <div class="mt-2 pt-4 footer">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-5 col-xs-12 about-company">
-      <h2>On Job Ph</h2>
-      <p class="pr-5 text-white-50">Welcome to your professional community. Find the job or intership that suits you.</p>
-      <p><a href="#"><i class="fab fa-facebook-square mr-1"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></p>
-    </div>
-    <div class="col-lg-3 col-xs-12 links">
-      <h4 class="mt-lg-0 mt-sm-3">Explore</h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-xs-12 about-company">
+        <h2>On Job Ph</h2>
+        <p class="pr-5 text-white-50">Welcome to your professional community. Find the job or intership that suits you.
+        </p>
+        <p><a href="#"><i class="fab fa-facebook-square mr-1"></i></a><a href="#"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+      <div class="col-lg-3 col-xs-12 links">
+        <h4 class="mt-lg-0 mt-sm-3">Explore</h4>
         <ul class="m-0 p-0">
           <li>- <a href="#">On Ph</a></li>
           <li>- <a href="#">About Us</a></li>
@@ -315,18 +116,18 @@
           <li>- <a href="#">Job Search</a></li>
           <li>- <a href="#">How to Use?</a></li>
         </ul>
+      </div>
+      <div class="col-lg-4 col-xs-12 location">
+        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+        <p>Sitka, United States</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+        <p><i class="fas fa-envelope mr-3"></i>info@onph.com</p>
+      </div>
     </div>
-    <div class="col-lg-4 col-xs-12 location">
-      <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-      <p>Sitka, United States</p>
-      <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
-      <p><i class="fas fa-envelope mr-3"></i>info@onph.com</p>
+    <div class="row mt-5">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
+      </div>
     </div>
   </div>
-  <div class="row mt-5">
-    <div class="col copyright">
-      <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
-    </div>
-  </div>
-</div>
 </div>
