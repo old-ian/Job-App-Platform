@@ -1,52 +1,73 @@
 <div class="body">
   <div class="container w-100">
     <br>
-    <div class="row">
+    <div div class="row">
       <div class="col-5">
-        <mat-card>
-          <div class="row">
-            <div class="col-9">
-              <mat-card-title-group>
-                <mat-card-title class="mb-0">{{jobOffers[0].position}}</mat-card-title>
-                <mat-card-subtitle class="text-dark"><i class="far fa-calendar-check"></i>&nbsp;{{jobOffers[0].date}} 
-                (<span class="text-dark">&#8369;{{jobOffers[0].salary}}</span>)</mat-card-subtitle>
-              </mat-card-title-group>
+        <div class="row">
+          <mat-card>
+            <div class="row">
+              <div class="col-9">
+                <mat-card-title-group>
+                  <mat-card-title class="mb-0">{{jobOffers[0].position}}</mat-card-title>
+                  <mat-card-subtitle class="text-dark"><i class="far fa-calendar-check"></i>&nbsp;{{jobOffers[0].date}} 
+                  (<span class="text-dark">&#8369;{{jobOffers[0].salary}}</span>)</mat-card-subtitle>
+                </mat-card-title-group>
+              </div>
+              <div class="col-3">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon class="ml-5">more_vertz</mat-icon>
+                </button>
+                <mat-menu color="primary" #menu="matMenu" class="menu" xPosition="before">
+                  <button mat-menu-item>
+                    <i class="far fa-bookmark"></i>
+                    <span class="item">&nbsp;Mark as Closed</span>
+                  </button>
+                  <button mat-menu-item (click)="goToJob(Job.id)">
+                    <i class="far fa-eye"></i>
+                    <span class="item">&nbsp;View</span>
+                  </button>
+                  <button mat-menu-item>
+                    <i class="fas fa-times"></i>
+                    <span class="item">&nbsp;Delete</span>
+                  </button>
+                  <button mat-menu-item (click)="updateJobOffer(Job.id)">
+                    <i class="fas fa-pen-alt"></i>
+                    <span class="item">&nbsp;Update</span>
+                  </button>
+                </mat-menu>
+              </div>
             </div>
-            <div class="col-3">
-              <button mat-icon-button [matMenuTriggerFor]="menu">
-                <mat-icon class="ml-5">more_vertz</mat-icon>
-              </button>
-              <mat-menu color="primary" #menu="matMenu" class="menu" xPosition="before">
-                <button mat-menu-item>
-                  <i class="far fa-bookmark"></i>
-                  <span class="item">&nbsp;Mark as Closed</span>
-                </button>
-                <button mat-menu-item (click)="goToJob(Job.id)">
-                  <i class="far fa-eye"></i>
-                  <span class="item">&nbsp;View</span>
-                </button>
-                <button mat-menu-item>
-                  <i class="fas fa-times"></i>
-                  <span class="item">&nbsp;Delete</span>
-                </button>
-                <button mat-menu-item (click)="updateJobOffer(Job.id)">
-                  <i class="fas fa-pen-alt"></i>
-                  <span class="item">&nbsp;Update</span>
-                </button>
-              </mat-menu>
+            <mat-card-content>
+              <div class="mb-3">
+                {{jobOffers[0].descriptions}}
+              </div>
+              <mat-chip-list class="qaulification">
+                <mat-chip class="text-light" *ngFor="let option of  qualifications">
+                  {{ option.name}}
+                </mat-chip>
+              </mat-chip-list>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="row mt-2">
+          <mat-card class="w-100">
+            <div class="row">
+              <div class="col-4">
+                <img class="img" src="assets/imgs/logo.png">
+              </div>
+              <div class="col-8">
+                <h5 class="text-success mb-0">Paul Justine Arzanmendez</h5>
+                <span class="text-secondary small">1-4 Years Experienced Employee</span>
+                <div class="mt-1">
+                  <div class="small"><i class="fas fa-university"></i>&nbsp;Bachelors Degree in Information Technology</div>
+                  <div class="small"><span class="fw-500">Age:</span> &nbsp;25 yrs old</div>
+                  <div class="small"><span class="fw-500">Role:</span> Software Engineer/Programmer</div>
+                  <div class="small"><span class="fw-500">Mastery:</span> Intermediate</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <mat-card-content>
-            <div class="mb-3">
-              {{jobOffers[0].descriptions}}
-            </div>
-            <mat-chip-list class="qaulification">
-              <mat-chip class="text-light" *ngFor="let option of  qualifications">
-                {{ option.name}}
-              </mat-chip>
-            </mat-chip-list>
-          </mat-card-content>
-        </mat-card>
+          </mat-card>
+        </div>
       </div>
       <div class="col-7">
         <mat-card class="pb-0">
@@ -64,8 +85,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let app of applicantsToShow, let i=index;">
-                    <th class="w-50">{{app.name}}</th>
+                  <tr class="select" *ngFor="let app of applicantsToShow, let i=index;">
+                    <td class="w-50">{{app.name}}</td>
                     <td>{{app.date}}</td>
                     <td>&#8369;18,000</td>
                   </tr>

@@ -2,6 +2,19 @@
   color: rgb(230, 110, 12) !important;
 }
 
+.select{
+  cursor: pointer;
+}
+
+.fw-500{
+  font-weight: 500;
+}
+
+.select:hover{
+  background-color: rgb(230, 110, 12) !important;
+  color: white;
+}
+
 ::ng-deep .menu {
   background: #ffffff !important;
   button {
@@ -220,8 +233,8 @@ mat-header-cell:first-of-type {
 }
 
 .img {
-  height: 90px;
-  width: 90px;
+  height: 110px;
+  width: 110px;
 }
 
 .job-title {

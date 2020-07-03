@@ -33,7 +33,7 @@ export class JobOfferByNameComponent implements OnInit {
     this.applicantsToShow = this.Applicants.slice(this.starting, this.ending);
   }
 
-  getApplicants(){
+  getApplicants() {
     this.Applicants = [
       { name: 'Ralph Jordan Butial', date: 'April 25, 2020' },
       { name: 'Rolee Reyes Boticario', date: 'April 01, 2020' },
